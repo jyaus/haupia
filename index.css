@@ -1,0 +1,264 @@
+:root
+{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 15px;
+    color: #333;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #f9f7f4;
+}
+
+header,
+footer
+{
+    color: #555;
+    background-color: #987;
+    border: 0 solid #a87;
+}
+header
+{
+    padding: 1rem 2rem 0 2rem;
+    border-bottom-width: 1px;
+}
+.header-content
+{
+    max-width: 900px;
+    margin: 0 auto .5rem auto;
+    text-align: center;
+}
+
+.header-block,
+.footer-block
+{
+    display: inline-block;
+    background: white;
+    padding: .5em;
+    margin: 0 .5rem 1rem .5rem;
+    max-width: 220px;
+    font-size: 1rem;
+    color: #444;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, .5);
+}
+.header-block.haupia-title
+{
+    max-width: none;
+    margin-top: -.5rem;
+    margin-right: 1.5rem;
+    padding: .1em .3em;
+}
+.footer-block
+{
+    max-width: 350px;
+}
+
+.haupia-title,
+.category-name,
+.component-name,
+.component-variant
+{
+    margin-bottom: .5rem;
+    font-family: "Baloo Da", sans-serif;
+    letter-spacing: .02rem;
+    color: #444;
+}
+
+.haupia-title
+{
+    font-size: 2.8rem;   
+    font-variant: small-caps;
+    color: #432;    
+    transform: scaleX(1.2);
+    transform-origin: 50% 50%;
+}
+.category-name
+{
+    margin-top: 3rem;
+    color: #432;    
+    font-size: 2rem;
+}
+.component-name
+{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+.component-variant
+{
+    margin-top: 2.75rem;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: normal;
+}
+.category-name:first-child,
+.component-name:first-child,
+.component-variant:first-child
+{
+    margin-top: 0;
+}
+
+
+.category-name
+{
+    padding: .5em;
+    line-height: 1.6rem;
+    text-align: center;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .15);
+}
+
+.pronunciation
+{
+    display: block;
+    margin-top: -.8rem;
+    font-size: .8rem;
+    font-family: sans-serif;
+}
+
+main
+{
+    box-sizing: border-box;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+}
+
+.category
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.item
+{
+    margin-bottom: 5rem;
+    max-width: 100%;
+    overflow: visible;
+}
+
+.intro
+{
+    font-size: 1rem;
+}
+.description code,
+.intro code
+{
+    white-space: nowrap;
+}
+
+.explanation
+{
+    font-size: .8em;
+}
+
+.description
+{
+    margin: 0 0 .5rem 0;
+    font-size: 1.15rem;
+    line-height: 1.3em;
+}
+.description:first-child
+{
+    margin-top: 1rem;
+}
+.component-code + .description
+{
+    margin-top: 4rem;
+}
+
+.examples
+{
+    margin: 1rem 0 1.5rem 0;
+    padding: 2rem;
+    background: white;
+    border: 2px dotted #ddd;
+}
+.example
+{
+    margin: .5rem 0;
+}
+.example-inline
+{
+    line-height: 2.5em;
+}
+
+.component-code
+{
+    display: block;
+    padding: 0 .5rem .8rem 1rem;
+    margin: 0 0 0 .5rem;
+    color: #333;
+    font-size: .8rem;
+    line-height: 1.1rem;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    background: #eee;   
+    border-left: 5px solid #dcc6c6;
+    overflow: auto;
+}
+
+@media (max-width: 768px)
+{ 
+    .category
+    {
+        display: block;
+    }
+    
+    .item
+    {
+        margin-bottom: 3rem;
+    }
+}
+
+.todo
+{
+    position: relative;
+    display: inline-block;
+    margin: 1.5rem 2.5rem 1.5rem -1rem;
+    padding: .5rem;
+    max-width: 40%;
+    font-family: serif;
+    color: #444;
+    font-style: italic;
+    vertical-align: top;
+    background: #fee;
+    border: 2px dashed #f33;
+    box-shadow: 5px 5px 5px 2px rgba(100, 50, 50, .2);
+    transform: rotate(1deg);
+}
+.todo::before
+{
+    content: "\2692  To do: ";
+    display: block;
+    max-width: 50%;
+    min-width: 100px;
+    padding: .1rem .3rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: #c33;
+    background: #edd;
+    transform: translateX(-.5rem) translateY(-.5rem);
+}
+
+footer
+{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-style: italic;
+    border-top: 1px solid #754;
+}
