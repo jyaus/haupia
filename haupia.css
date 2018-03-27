@@ -1,6 +1,6 @@
 /*
     Haupia - a tasty little component library
-    Version 0.9 - 2018 March 26
+    Version 0.9 - 2018 March 27
     
     https://jyaus.github.io/haupia
 */
@@ -164,6 +164,7 @@
 {
     position: relative;
     display: inline-block;
+    user-select: none;
 }
 
 .hp-button-large
@@ -234,7 +235,8 @@
     background: var(--haupia-input-background-color);
     border: var(--haupia-checkbox-border-width) solid var(--haupia-border-color);
     border-radius: var(--haupia-border-radius);   
-    cursor: pointer;     
+    cursor: pointer;
+    user-select: none;    
 }
 
 .hp-checkbox:checked,
@@ -295,6 +297,7 @@
     background-color: var(--haupia-button-background-color-secondary);
     border-right-color: var(--haupia-border-color);
     border-radius: 0;
+    user-select: none;
 }
 .hp-radio-buttonbar input:checked + .hp-radio-buttonbar-button
 {
@@ -645,6 +648,7 @@ input:checked:disabled + .hp-radio-buttonbar-button
     border-bottom-color: var(--haupia-tabs-background-color-unselected);
     border-radius: var(--haupia-border-radius) var(--haupia-border-radius) 0 0;
     cursor: pointer;
+    user-select: none;
 }
 .hp-tabs > label:last-of-type
 {
@@ -735,6 +739,7 @@ input:checked:disabled + .hp-radio-buttonbar-button
     border: var(--haupia-button-border-width) solid var(--haupia-button-border-color);
     border-radius: var(--haupia-border-radius) var(--haupia-border-radius) 0 0;
     cursor: pointer;
+    user-select: none;
 }
 .hp-collapsible-header::before
 {
