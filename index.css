@@ -160,6 +160,10 @@ main
     font-size: .8em;
 }
 
+.download
+{
+}
+
 .description
 {
     margin: 0 0 .5rem 0;
@@ -208,13 +212,29 @@ main
 
 @media (max-width: 768px)
 { 
+    .header-block.haupia-title
+       {
+       margin: -.5rem 1rem 1rem 1rem;
+    }
+    
+    .download
+       {
+       text-align: center;
+       padding: 0 20%;
+    }
+    
+    .download .hp-button
+       {
+       margin-bottom: .5rem;
+    }
+
     .category
-    {
+       { 
         display: block;
     }
     
     .item
-    {
+       {
         margin-bottom: 3rem;
     }
 }

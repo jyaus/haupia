@@ -20,7 +20,7 @@
     --haupia-highlight-color: #46c; /* default color for checkboxes, radios, progress */
    
     --haupia-hover-filter: saturate(130%) brightness(90%);
-    --haupia-active-filter: saturate(140%) brightness(110%);
+    --haupia-active-filter: saturate(145%) brightness(105%);
     --haupia-selected-filter: saturate(80%);
     --haupia-disabled-filter: saturate(75%) contrast(30%) brightness(150%);
         
@@ -160,26 +160,23 @@
     filter: var(--haupia-active-filter);
 }
 
-.hp-button:disabled,
-.hp-select:disabled,
-.hp-input-text:disabled,
-.hp-textarea:disabled,
-.hp-checkbox:disabled,
-.hp-switch:disabled,
-.hp-radio:disabled,
-input:disabled + .hp-radio-buttonbar-button
+.hp-button
 {
-    cursor: default;
-    filter: var(--haupia-disabled-filter);
+    position: relative;
+    display: inline-block;
 }
 
 .hp-button-large
 {
-    font-size: calc(var(--haupia-font-size) * var(--haupia-size-large-factor))
+    padding-top: calc(--haupia-button-vertical-padding * (1em / var(--haupia-size-large-factor) ) );
+    padding-bottom: calc(--haupia-button-vertical-padding * (1em / var(--haupia-size-large-factor) ) );
+    font-size: calc(var(--haupia-font-size) * var(--haupia-size-large-factor));
+    line-height: calc(var(--haupia-button-line-height) * var(--haupia-size-large-factor));
 }
 .hp-button-small
 {
-    font-size: calc(var(--haupia-font-size) * var(--haupia-size-small-factor))
+    font-size: calc(var(--haupia-font-size) * var(--haupia-size-small-factor));
+    line-height: calc(var(--haupia-button-line-height) * var(--haupia-size-small-factor));
 }
 
 .hp-button.hp-button-secondary
@@ -399,6 +396,20 @@ input:disabled + .hp-radio-buttonbar-button
 .hp-textarea:disabled
 {
     background: var(--haupia-input-background-color-disabled);
+}
+
+.hp-button:disabled,
+.hp-select:disabled,
+.hp-input-text:disabled,
+.hp-textarea:disabled,
+.hp-checkbox:disabled,
+.hp-switch:disabled,
+.hp-radio:disabled,
+input:disabled + .hp-radio-buttonbar-button,
+input:checked:disabled + .hp-radio-buttonbar-button
+{
+    cursor: default;
+    filter: var(--haupia-disabled-filter);
 }
 
 .hp-badge
