@@ -17,6 +17,13 @@ Usage
 ----
 Documentation at [https://jyaus.github.io/haupia/](https://jyaus.github.io/haupia/)
 
+Browser Support
+----
+Haupia uses CSS custom properties (variables) and CSS filters, so has full support from any browser that supports both, which is most modern browsers.
+(Older browsers get a fallback version that's functional, if visually unexciting.)
+
 Version History
 -----
+Version 0.9.1: Added fallback support for older browsers.
+
 Version 0.9: Almost done! Just some small bugs to fix.

@@ -212,6 +212,11 @@ main
 
 @media (max-width: 768px)
 { 
+    main
+       {
+      padding: 1rem 10vw;
+    }
+    
     .header-block.haupia-title
        {
        margin: -.5rem 1rem 1rem 1rem;
@@ -236,6 +241,11 @@ main
     .item
        {
         margin-bottom: 3rem;
+    }
+    
+    .item:first-of-type .component-name
+       {
+        margin-top: 1rem;
     }
 }
 

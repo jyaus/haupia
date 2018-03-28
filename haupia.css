@@ -1,6 +1,6 @@
 /*
     Haupia - a tasty little component library
-    Version 0.9 - 2018 March 27
+    Version 0.9.1 - 2018 March 28
     
     https://jyaus.github.io/haupia
 */
@@ -104,7 +104,7 @@
     --haupia-spinner-border-color: #bbb;
     
     --haupia-tooltip-background-color: #ddd;
-    --haupia-tooltip-z-index: 9; /* should be higher than anything else */
+    --haupia-tooltip-z-index: 9999;
     
     --haupia-list-vertical-gutter: .2em;
     --haupia-ul-bullet: "\2022";
@@ -121,15 +121,116 @@
     -webkit-text-size-adjust: 100%;
 }
 
+/* 
+   Fallbacks for older browsers that don't support CSS variables.
+   These don't aim to be anything more than "ugly, but minimally-functional"
+*/
+.hp-button,
+.hp-radio-buttonbar input:checked + .hp-radio-buttonbar-button,
+.hp-collapsible-header
+{
+    padding: .25em;
+    color: #fff;
+    background: #46c;
+}
+.hp-button:disabled,
+input:disabled + .hp-radio-buttonbar-button
+{
+    opacity: 0.5;
+}
+.hp-button.hp-button-secondary,
+.hp-radio-buttonbar .hp-radio-buttonbar-button
+{
+    padding: .25em;
+    background: #eee;
+    color: #333;
+}
+.hp-button.hp-button-danger
+{
+    color: #333;
+    background-color: #e55;
+}
+.hp-button.hp-button-light,
+.hp-button.hp-button-clear
+{
+    color: #333;
+    background-color: transparent;
+}
+.hp-button.hp-button-clear
+{
+    border-color: transparent;
+}
+.hp-input-group
+{
+    background: #ddd;
+    border: 1px solid #666;
+}
+.hp-tabs > input:checked + label 
+{
+    color: #333;
+    background: #ddf;
+}
+.hp-alert
+{
+    background: #fee;
+    border: 1px solid #ccc;
+}
+.hp-progress-list li::before
+{
+    border: 1px solid #333;
+    transform: translateY(-.5em);
+}
+.hp-ul li::before,
+.hp-progress-list .hp-progress-list-current::before
+{
+    content: "\26ab";
+}
+.hp-tooltip-content
+{
+    background: #eee;
+}
+.hp-spinner
+{
+    border: 5px dashed #bbb;
+    width: 50px;
+    height: 50px;
+}
+.hp-code-block
+{
+    background: #333;
+}
+.hp-badge
+{
+    background: #bbb;
+}
+
+/* 
+    Haupia components (for modern browsers)
+*/
+@supports (--custom-properties: yes) /* make sure older browsers get the native appearance */
+{
+    .hp-button,
+    .hp-select,
+    .hp-input-text,
+    .hp-textarea,
+    .hp-radio-buttonbar-button,
+    .hp-checkbox,
+    .hp-radio,
+    .hp-switch,
+    .hp-progress 
+    {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+}
+
 .hp-button,
 .hp-select,
 .hp-input-text,
 .hp-textarea,
 .hp-radio-buttonbar-button
 {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     box-sizing: border-box;
     padding: var(--haupia-button-vertical-padding) var(--haupia-button-horizontal-padding);
     font-family: var(--haupia-font-family);
@@ -203,9 +304,6 @@
 
 .hp-select
 {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     padding-right: 2em;
     background-image: 
         linear-gradient(to bottom, var(--haupia-button-background-color) .73em, transparent .73em),
@@ -225,16 +323,13 @@
 .hp-switch
 {
     box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     height: var(--haupia-checkbox-size);
     width: var(--haupia-checkbox-size);
     margin-top: 0;
     margin-bottom: 0;
     background: var(--haupia-input-background-color);
     border: var(--haupia-checkbox-border-width) solid var(--haupia-border-color);
-    border-radius: var(--haupia-border-radius);   
+    border-radius: var(--haupia-border-radius);
     cursor: pointer;
     user-select: none;    
 }
@@ -249,12 +344,6 @@
 .hp-radio:disabled
 {
     background: var(--haupia-input-background-color-disabled);
-}
-
-.hp-checkbox::-ms-check,
-.hp-radio::-ms-check
-{
-    opacity: 0;
 }
 
 .hp-checkbox:checked
@@ -330,10 +419,6 @@
 {
     box-shadow: inset calc(var(--haupia-checkbox-size) - var(--haupia-checkbox-border-width)) 0 0 0 var(--haupia-checkbox-highlight-color); /* "on" background color */ 
 }
-.hp-switch::-ms-check
-{
-    opacity: 0;
-}
 
 .hp-input-group
 {
@@ -355,9 +440,15 @@
     flex: 1 10 auto;
     min-width: 2em;
     width: 100%;
-    border-top-width: 0;
-    border-bottom-width: 0;
     border-radius: 0;
+}
+@supports (--custom-properties: yes) /* make sure older browsers get a visible input field */
+{
+    .hp-input-group .hp-input-text
+    {
+        border-top-width: 0;
+        border-bottom-width: 0;
+    }
 }
 .hp-input-group .hp-input-text:first-child
 {
@@ -413,6 +504,14 @@ input:checked:disabled + .hp-radio-buttonbar-button
 {
     cursor: default;
     filter: var(--haupia-disabled-filter);
+}
+@supports (--custom-properties: yes) /* override the fallback we use for older browsers */
+{
+    .hp-button:disabled,
+    input:disabled + .hp-radio-buttonbar-button
+    {
+        opacity: 1; 
+    }
 }
 
 .hp-badge
@@ -840,9 +939,6 @@ input:checked:disabled + .hp-radio-buttonbar-button
 
 .hp-progress /* the underlying, unfilled part */
 {
-    -webkit-appearance: none;
-	-moz-appearance: none;
-    appearance: none;
     display: block;
     width: 100%;
     color: var(--haupia-progress-fill-color); /* the filled color in IE */
@@ -902,6 +998,8 @@ input:checked:disabled + .hp-radio-buttonbar-button
     top: 0;
     width: 2em;
     height: 2em;
+    margin: 0;
+    padding: 0;
     font-size: .8em;
     font-weight: bold;
     color: var(--haupia-progress-list-fill-color);
@@ -925,6 +1023,13 @@ input:checked:disabled + .hp-radio-buttonbar-button
 {
     background-image: radial-gradient(var(--haupia-progress-list-fill-color) 50%, var(--haupia-input-background-color) 51%, var(--haupia-input-background-color) 100%);
     border-color: var(--haupia-progress-list-fill-color);
+}
+@supports (--custom-properties: yes) /* override the fallback we use for older browsers */
+{
+    .hp-progress-list .hp-progress-list-current::before
+    {
+        content: " ";
+    }
 }
 
 .hp-h1,
