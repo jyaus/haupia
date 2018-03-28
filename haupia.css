@@ -126,10 +126,14 @@
    These don't aim to be anything more than "ugly, but minimally-functional"
 */
 .hp-button,
-.hp-radio-buttonbar input:checked + .hp-radio-buttonbar-button,
 .hp-collapsible-header
 {
     padding: .25em;
+}
+.hp-button,
+.hp-radio-buttonbar input:checked + .hp-radio-buttonbar-button,
+.hp-collapsible-header
+{
     color: #fff;
     background: #46c;
 }
@@ -139,7 +143,7 @@ input:disabled + .hp-radio-buttonbar-button
     opacity: 0.5;
 }
 .hp-button.hp-button-secondary,
-.hp-radio-buttonbar .hp-radio-buttonbar-button
+.hp-radio-buttonbar-button
 {
     padding: .25em;
     background: #eee;
@@ -165,7 +169,8 @@ input:disabled + .hp-radio-buttonbar-button
     background: #ddd;
     border: 1px solid #666;
 }
-.hp-tabs > input:checked + label 
+.hp-tabs > input:checked + label,
+.hp-tabs.hp-tabs-simple > input:checked + label 
 {
     color: #333;
     background: #ddf;

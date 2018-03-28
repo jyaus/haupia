@@ -11,19 +11,17 @@ Just drop the stylesheet onto your page, and you're off!
 
 Installation
 -----
-Just download the .css file, link to it on your page, and you're good to go!
+Just download the .css file, link to it on your page, and that's it! Go (coco)nuts!
 
 Usage
 ----
-Documentation at [https://jyaus.github.io/haupia/](https://jyaus.github.io/haupia/)
+Documentation and examples at [https://jyaus.github.io/haupia/](https://jyaus.github.io/haupia/)
 
 Browser Support
 ----
-Haupia uses CSS custom properties (variables) and CSS filters, so has full support from any browser that supports both, which is most modern browsers.
+Haupia uses CSS custom properties (variables) and CSS filters, so has full support from any browser that supports both, which is [most modern browsers](https://caniuse.com/#feat=css-variables).
 (Older browsers get a fallback version that's functional, if visually unexciting.)
 
 Version History
 -----
-Version 0.9.1: Added fallback support for older browsers.
-
-Version 0.9: Almost done! Just some small bugs to fix.
+* Version 1.0 (2018 March 28): Hello, world!
