@@ -169,11 +169,18 @@ input:disabled + .hp-radio-buttonbar-button
     background: #ddd;
     border: 1px solid #666;
 }
-.hp-tabs > input:checked + label,
-.hp-tabs.hp-tabs-simple > input:checked + label 
+.hp-tabs > label
+{
+    padding: .25em;
+}
+.hp-tabs > input:checked + label
 {
     color: #333;
     background: #ddf;
+}
+.hp-tabs-simple > input:checked + label 
+{
+    border-bottom: 1px solid #ddf;
 }
 .hp-alert
 {
@@ -811,7 +818,7 @@ input:checked:disabled + .hp-radio-buttonbar-button
 .hp-tabs-simple > input:checked + label 
 {
     background: none;
-    border-bottom-color: var(--haupia-highlight-color);
+    border-bottom: 2px solid var(--haupia-highlight-color);
 }
 .hp-tabs-simple > input:disabled + label
 {
