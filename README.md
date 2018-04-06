@@ -24,5 +24,6 @@ Haupia uses CSS custom properties (variables) and CSS filters, so has full suppo
 
 Version History
 -----
+* Version 1.1 (2018 April 6): added support for shadows on buttons; disabled elements get a "not allowed" cursor
 * Version 1.0.1 (2018 March 29): Minor visual fix to the "simple" tabs.
 * Version 1.0 (2018 March 28): Hello, world!

@@ -1,6 +1,6 @@
 /*
     Haupia - a tasty little component library
-    Version 1.0.1 - 2018 March 29
+    Version 1.1 - 2018 April 6
     
     https://jyaus.github.io/haupia
 */
@@ -31,6 +31,7 @@
     
     --haupia-button-border-width: 1px;
     --haupia-button-border-color: transparent;
+    --haupia-button-box-shadow: none;
     
     --haupia-button-vertical-padding: .25em;
     --haupia-button-horizontal-padding: .75em;
@@ -254,6 +255,7 @@ input:disabled + .hp-radio-buttonbar-button
     border: var(--haupia-button-border-width) solid var(--haupia-button-border-color);
     border-radius: var(--haupia-border-radius);   
     vertical-align: middle;
+    box-shadow: var(--haupia-button-box-shadow);
     cursor: pointer;     
 }
 
@@ -424,7 +426,6 @@ input:disabled + .hp-radio-buttonbar-button
     border-radius: calc(var(--haupia-checkbox-size) / 2);
     background-color: var(--haupia-input-background-color); 
     box-shadow: inset calc((var(--haupia-checkbox-size) - var(--haupia-checkbox-border-width)) * -1) 0 0 0 #bbb; /* "off" background color */ 
-    outline: none;
     transition: var(--haupia-control-transition-time);
 }
 .hp-switch:checked
@@ -453,6 +454,7 @@ input:disabled + .hp-radio-buttonbar-button
     min-width: 2em;
     width: 100%;
     border-radius: 0;
+    box-shadow: none;
 }
 @supports (--custom-properties: yes) /* make sure older browsers get a visible input field */
 {
@@ -490,6 +492,7 @@ input:disabled + .hp-radio-buttonbar-button
     color: var(--haupia-font-color);
     background: var(--haupia-input-background-color);
     border: var(--haupia-text-input-border-width) solid var(--haupia-border-color);
+    box-shadow: none;
 }
 .hp-input-text:focus,
 .hp-textarea:focus
@@ -514,7 +517,7 @@ input:disabled + .hp-radio-buttonbar-button
 input:disabled + .hp-radio-buttonbar-button,
 input:checked:disabled + .hp-radio-buttonbar-button
 {
-    cursor: default;
+    cursor: not-allowed;
     filter: var(--haupia-disabled-filter);
 }
 @supports (--custom-properties: yes) /* override the fallback we use for older browsers */
