@@ -142,7 +142,7 @@
                     <button class="hp-button">&lt;button&gt; tag</button>
                     <a class="hp-button">&lt;a&gt; tag</a>
                     <input type="submit" value="&lt;input type='submit'&gt;" class="hp-button" />
-                    <span class="hp-button">&lt;span&gt; tag</span>
+                    <span class="hp-button" role="button" tabindex="0">&lt;span&gt; tag</span>
                     <button class="hp-button" disabled="disabled">Disabled button</button>
                 </div>
             </div>
@@ -153,7 +153,9 @@
             
             &lt;a href="somewhere" class="hp-button"&gt;Button text&lt;/a&gt;
             
-            &lt;span class="hp-button"&gt;Button text&lt;/span&gt;
+            &lt;span class="hp-button" role="button" tabindex="0"&gt;
+                Button text
+            &lt;/span&gt;
             
             &lt;input type="submit" class="hp-button" value="Button text" /&gt;
             </code>
@@ -265,23 +267,23 @@
             </p>
 
             <div class="examples">
-                <div class="hp-radio-buttonbar">
+                <fieldset class="hp-radio-buttonbar" role="toolbar">
                     <input type="radio" id="myradio-buttonbar1" name="myradio-buttonbar" value="1" checked="checked" />
                     <label class="hp-radio-buttonbar-button" for="myradio-buttonbar1">Radio 1</label>
                     <input type="radio" id="myradio-buttonbar2" name="myradio-buttonbar" value="2" />
                     <label class="hp-radio-buttonbar-button" for="myradio-buttonbar2">Radio 2</label>
                     <input type="radio" id="myradio-buttonbar3" name="myradio-buttonbar" value="3" />
                     <label class="hp-radio-buttonbar-button" for="myradio-buttonbar3">Radio 3</label>
-                </div>
+                </fieldset>
             </div>
 
             <code class="component-code">
-            &lt;div class="hp-radio-buttonbar"&gt;
+            &lt;fieldset class="hp-radio-buttonbar" role="toolbar"&gt;
                 &lt;input type="radio" id="exampleRadio1" name="exampleRadio" value="exampleValue" /&gt;
                 &lt;label class="hp-radio-buttonbar-button" for="exampleRadio1"&gt;
                     Button Text
                 &lt;/label&gt;
-            &lt;/div&gt;
+            &lt;/fieldset&gt;
             </code>
 
         </section>
@@ -368,7 +370,7 @@
                     </div>
                 </div>
                 <div class="example">    
-                    <div class="hp-input-group">
+                    <div class="hp-input-group" role="group">
                         <input type="text" class="hp-input-text" />
                         <input type="submit" value="Search" class="hp-button" />
                     </div>
@@ -382,7 +384,7 @@
                 &lt;span class="hp-input-group-static"&gt;.00&lt;/span&gt;
             &lt;/div&gt;
 
-            &lt;div class="hp-input-group"&gt;
+            &lt;div class="hp-input-group" role="group"&gt;
                 &lt;input type="text" class="hp-input-text" /&gt;
                 &lt;input type="submit" value="Search" class="hp-button" /&gt;
             &lt;/div&gt;
@@ -474,7 +476,7 @@
         <div class="examples">
             <ul class="hp-progress-list">
                 <li class="hp-progress-list-complete">Completed step</li>
-                <li class="hp-progress-list-current">Current step</li>
+                <li class="hp-progress-list-current" aria-current="step">Current step</li>
                 <li>Future step</li>
             </ul>
         </div>
@@ -482,7 +484,7 @@
         <code class="component-code">
         &lt;ul class="hp-progress-list"&gt;
             &lt;li class="hp-progress-list-complete"&gt;Completed step&lt;/li&gt;
-            &lt;li class="hp-progress-list-current"&gt;Current step&lt;/li&gt;
+            &lt;li class="hp-progress-list-current" aria-current="step"&gt;Current step&lt;/li&gt;
             &lt;li&gt;Future step&lt;/li&gt;
         &lt;/ul&gt;
         </code>
@@ -496,29 +498,29 @@
         <h3 class="component-name">Alert</h3>
         <div class="examples">
             <div class="example">
-                <div class="hp-alert">I am a default alert.</div>
+                <div class="hp-alert" role="alert">I am a default alert.</div>
             </div>
             <div class="example">
-                <div class="hp-alert hp-alert-error">I am an error alert.</div>
+                <div class="hp-alert hp-alert-error" role="alert">I am an error alert.</div>
             </div>
             <div class="example">
-                <div class="hp-alert hp-alert-warning">I am a warning alert.</div>
+                <div class="hp-alert hp-alert-warning" role="alert">I am a warning alert.</div>
             </div>
             <div class="example">
-                <div class="hp-alert hp-alert-success">I am a success alert.</div>
+                <div class="hp-alert hp-alert-success" role="alert">I am a success alert.</div>
             </div>
             <div class="example">
-                <div class="hp-alert hp-alert-info">I am an info alert.</div>
+                <div class="hp-alert hp-alert-info" role="alert">I am an info alert.</div>
             </div>
         </div>
 
 
         <code class="component-code">
-        &lt;div class="hp-alert"&gt;
+        &lt;div class="hp-alert" role="alert"&gt;
             I am a default alert.
         &lt;/div&gt;
         
-        &lt;div class="hp-alert hp-alert-error"&gt;
+        &lt;div class="hp-alert hp-alert-error" role="alert"&gt;
             I am an error alert.
         &lt;/div&gt;
         
@@ -555,7 +557,7 @@
 
         <h3 class="component-name">Breadcrumbs</h3>
         <div class="examples">
-            <ul class="hp-breadcrumbs">
+            <ul class="hp-breadcrumbs" role="navigation">
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li>Not a Link 3</li>
@@ -564,7 +566,7 @@
 
 
         <code class="component-code">
-        &lt;ul class="hp-breadcrumbs"&gt;
+        &lt;ul class="hp-breadcrumbs" role="navigation"&gt;
             &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;Not a Link 3&lt;/li&gt;
@@ -582,11 +584,11 @@
 
         <h3 class="component-name">Loading spinner</h3>
         <div class="examples">
-            <span class="hp-spinner"></span>
+            <span class="hp-spinner" aria-live="polite" role="status"></span>
         </div>
 
         <code class="component-code">
-        &lt;span class="hp-spinner"&gt;&lt;span&gt;
+        &lt;span class="hp-spinner" aria-live="polite" role="status"&gt;&lt;span&gt;
         </code>
 
 
@@ -644,14 +646,14 @@
         <div class="examples">
             <div class="hp-tooltip">
                 <p>Hover over me to see a tooltip.</p>
-                <aside class="hp-tooltip-content">I am the tooltip content!</aside>
+                <aside class="hp-tooltip-content" role="tooltip">I am the tooltip content!</aside>
             </div>
         </div>
 
         <code class="component-code">
         &lt;div class="hp-tooltip"&gt;
             &lt;p&gt;I am the regular content.&lt;/p&gt;
-            &lt;aside class="hp-tooltip-content"&gt;
+            &lt;aside class="hp-tooltip-content" role="tooltip"&gt;
                 I am the tooltip content.
             &lt;/aside&gt;
         &lt;/div&gt;
@@ -769,22 +771,22 @@
         <h3 class="component-name">Tabs</h3>
         <p class="description">Tabs use radio buttons to control which tab is shown. Set the default tab's radio button to checked.</p>
         <div class="examples">
-            <div class="hp-tabs">
-              <input type="radio" name="mytabs" value="1" id="tab1" checked="checked">
-              <label for="tab1">Tab 1</label>
-              <div class="hp-tabs-content">
+            <div class="hp-tabs" role="tablist">
+              <input type="radio" name="mytabs" value="1" id="tab1" checked="checked" role="tab" aria-controls="tabpanel1">
+              <label for="tab1" id="tablabel1">Tab 1</label>
+              <div class="hp-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel1">
                  Tab 1 content
               </div>
               
-              <input type="radio" name="mytabs" value="2" id="tab2">
-              <label for="tab2">Tab 2</label>
-              <div class="hp-tabs-content">
+              <input type="radio" name="mytabs" value="2" id="tab2" role="tab" aria-controls="tabpanel2">
+              <label for="tab2" id="tablabel2">Tab 2</label>
+              <div class="hp-tabs-content" id="tabpanel2" role="tabpanel" aria-labelledby="tablabel2">
                  Tab 2 content
               </div>
               
-              <input type="radio" name="mytabs" value="3" id="tab3" disabled="disabled">
-              <label for="tab4">Disabled</label>
-              <div class="hp-tabs-content">
+              <input type="radio" name="mytabs" value="3" id="tab3" disabled="disabled" role="tab" aria-controls="tabpanel3">
+              <label for="tab3" id="tablabel3">Disabled</label>
+              <div class="hp-tabs-content" id="tabpanel3" role="tabpanel" aria-labelledby="tablabel3">
                  Tab 3 content
               </div>
             </div>
@@ -792,16 +794,16 @@
 
 
         <code class="component-code">
-        &lt;div class="hp-tabs"&gt;
-            &lt;input type="radio" name="exampleTabs" value="1" id="exampleTab1" checked="checked"&gt;
-            &lt;label for="exampleTab1"&gt;Tab 1&lt;/label&gt;
-            &lt;div class="hp-tabs-content"&gt;
+        &lt;div class="hp-tabs" role="tablist"&gt;
+            &lt;input type="radio" name="exampleTabs" value="1" id="exampleTab1" checked="checked" role="tab" aria-controls="tabpanel1"&gt;
+            &lt;label for="exampleTab1" id="tablabel1"&gt;Tab 1&lt;/label&gt;
+            &lt;div class="hp-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel1"&gt;
                 Tab 1 content, shown by default
             &lt;/div&gt;
           
-            &lt;input type="radio" name="exampleTabs" value="2" id="exampleTab2"&gt;
-            &lt;label for="exampleTab2"&gt;Tab 2&lt;/label&gt;
-            &lt;div class="hp-tabs-content"&gt;
+            &lt;input type="radio" name="exampleTabs" value="2" id="exampleTab2" role="tab" aria-controls="tabpanel2"&gt;
+            &lt;label for="exampleTab2" id="tablabel2"&gt;Tab 2&lt;/label&gt;
+            &lt;div class="hp-tabs-content" id="tabpanel2" role="tabpanel" aria-labelledby="tablabel2"&gt;
                 Tab 2 content
             &lt;/div&gt;
         &lt;/div&gt;
@@ -813,22 +815,22 @@
             The "simple" variant gives the tabs a simpler display.
         </p>
         <div class="examples">
-            <div class="hp-tabs hp-tabs-simple">
-              <input type="radio" name="mytabssimple" value="1" id="tab-s1" checked="checked">
-              <label for="tab-s1">Tab 1</label>
-              <div class="hp-tabs-content">
+            <div class="hp-tabs hp-tabs-simple" role="tablist">
+              <input type="radio" name="mytabssimple" value="1" id="tab-s1" checked="checked" role="tab" aria-controls="tabpanel-s1">
+              <label for="tab-s1" id="tablabel-s1">Tab 1</label>
+              <div class="hp-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel-s1">
                  Tab 1 content using "simple" variant
               </div>
               
-              <input type="radio" name="mytabssimple" value="2" id="tab-s2">
-              <label for="tab-s2">Tab 2</label>
-              <div class="hp-tabs-content">
+              <input type="radio" name="mytabssimple" value="2" id="tab-s2" role="tab" aria-controls="tabpanel-s2">
+              <label for="tab-s2" id="tablabel-s2">Tab 2</label>
+              <div class="hp-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel-s2">
                  Tab 2 content using "simple" variant
               </div>
               
-              <input type="radio" name="mytabssimple" value="3" id="tab-s3" disabled="disabled">
-              <label for="tab-s4">Disabled Tab</label>
-              <div class="hp-tabs-content">
+              <input type="radio" name="mytabssimple" value="3" id="tab-s3" disabled="disabled" role="tab" aria-controls="tabpanel-s3">
+              <label for="tab-s3" id="tablabel-s3">Disabled Tab</label>
+              <div class="hp-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel-s3">
                  Tab 3 content using "simple" variant
               </div>
             </div>
@@ -1267,6 +1269,24 @@
         </div>
     </div>
     
+</section>
+
+<a name="accessibility"></a>
+<section class="category">
+
+    <div class="category-overview">
+        <h2 class="category-name">Accessibility</h2>
+    </div>
+
+    <div class="items intro">
+        <p>
+            Haupia is a CSS-only library &mdash; but often, adding necessary accessibility support
+            simply requires JavaScript, so using Haupia alone may not meet 
+            <a href="https://www.w3.org/TR/WCAG21/">WCAG guidelines</a>.
+            The listed APIs include some accessibility support, where HTML and CSS alone
+            could provide it.
+        </p>
+    </div>
 </section>
 
 </main>

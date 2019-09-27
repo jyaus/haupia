@@ -10,6 +10,7 @@ body
     margin: 0;
     padding: 0;
     background-color: #f9f7f4;
+    line-height: 1.5em;
 }
 
 header,
@@ -52,6 +53,7 @@ header
     margin-top: -.5rem;
     margin-right: 1.5rem;
     padding: .1em .3em;
+    line-height: initial;
 }
 .footer-block
 {
@@ -92,7 +94,6 @@ header
 {
     margin-top: 2.75rem;
     font-size: 1.2rem;
-    line-height: 1.2rem;
     font-weight: normal;
 }
 .category-name:first-child,
@@ -168,7 +169,6 @@ main
 {
     margin: 0 0 .5rem 0;
     font-size: 1.15rem;
-    line-height: 1.3em;
 }
 .description:first-child
 {
@@ -202,7 +202,7 @@ main
     margin: 0 0 0 .5rem;
     color: #333;
     font-size: .8rem;
-    line-height: 1.1rem;
+    line-height: 1.2rem;
     word-wrap: break-word;
     white-space: pre-wrap;
     background: #eee;   
