@@ -3,8 +3,8 @@ Haupia
 ## a tasty little component library by Jeff Yaus
 
 About
------
-Haupia is a component library designed to be simple to use, to install, and to modify. 
+-----           
+Haupia is a lightweight (just 28K minified!) component library for webpages, designed to be simple to use, to install, and to modify.
 It is made from **just pure CSS**, meaning **no build steps**, no JavaScript dependencies, no CSS processing to configure, no image directory to set up. 
 While maybe not as feature-rich as some libraries, Haupia is ideal when you just want to get going with a minimum of fuss. 
 Just drop the stylesheet onto your page, and you're off! 
@@ -19,8 +19,9 @@ Documentation and examples at [https://jyaus.github.io/haupia/](https://jyaus.gi
 
 Browser Support
 ----
-Haupia uses CSS custom properties (variables) and CSS filters, so has full support from any browser that supports both, which is [most modern browsers](https://caniuse.com/#feat=css-variables).
-(Older browsers get a fallback version that's functional, if visually unexciting.)
+Haupia uses CSS custom properties (variables) and CSS filters, which [most modern browsers](https://caniuse.com/#feat=css-variables) support. 
+Dismissible Alerts require the `:has` feature, which [some browsers](https://caniuse.com/css-has) may not support.
+
 
 Version History
 -----
