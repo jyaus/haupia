@@ -46,11 +46,12 @@
 
     <div class="items intro">
         <p>
-            Haupia is a component library designed to be simple to use, to install, and to modify.
+            Haupia is a lightweight (just 28K minified!) component library for webpages,
+            designed to be simple to use, to install, and to modify.
             It is made from <strong>just pure CSS</strong>, meaning <strong>no build steps</strong>, 
             no JavaScript dependencies, no CSS processing to configure, no image directory to set up.
-            While maybe not as feature-rich as some libraries, Haupia is ideal when you just want to 
-            get going with a minimum of fuss. Just drop the stylesheet onto your page, and you're off!
+            While maybe not as feature-rich as some component libraries, Haupia is ideal when you want
+            a minimum of fuss. Just drop the stylesheet onto your page, and you're off!
             
         </p>
                 
@@ -72,9 +73,9 @@
 
     <div class="items intro">
         <div class="download">
-            <a href="haupia.css" class="hp-button hp-button-large">Download it!</a>
-            <a href="haupia_min.css" class="hp-button hp-button-small">Download it minified</a>
-            <a href="https://github.com/jyaus/haupia" class="hp-button hp-button-small hp-button-secondary">Fork it on GitHub</a>
+            <a href="haupia.css" class="haupia-button haupia-button-large">Download it!</a>
+            <a href="haupia_min.css" class="haupia-button haupia-button-small">Download it minified</a>
+            <a href="https://github.com/jyaus/haupia" class="haupia-button haupia-button-small haupia-button-secondary">Fork it on GitHub</a>
         </div>
         <p>
             To install Haupia, just copy the stylesheet into your site, and link to it from your page. That's it! Go (coco)nuts!
@@ -82,12 +83,12 @@
         <p>
             Haupia only styles the CSS classes that are part of its API; it won't affect anything else
             on your page, so it is easily used alongside your existing CSS, or even alongside 
-            another front-end framework!
+            another front-end framework.
         </p>
         <p>
-            This simpler components just use the relevant HTML tag, plus a class of <code >hp-</code> and the name of the element.
+            This simpler components just use the relevant HTML tag, plus a class of <code >haupia-</code> and the name of the element.
             For instance, a Haupia checkbox is a regular <code>&lt;input type="checkbox"&gt;</code> plus the class
-            <code>hp-checkbox</code>. More complex components might need additional wrapper or sibling elements.
+            <code>haupia-checkbox</code>. More complex components might need additional wrapper or sibling elements.
             (Code examples are given below.)
         </p>
         
@@ -98,21 +99,6 @@
             own palette, typography, and look-and-feel. For instance, you can 
             change the background color of the basic buttons by adjusting the value
             of <code>--haupia-button-background-color</code> to your preferred color.
-        </p>
-        
-        <h4 class="component-variant">Browser support</h4>
-        <p>
-            What makes Haupia's code so simple is its extensive use of 
-            CSS custom properties (variables) and CSS filters, so 
-            it works in any browser that supports these features
-            (which is <a href="https://caniuse.com/#feat=css-variables">most modern browsers</a>).
-        </p>
-        <p>
-            (Older browsers will get a fallback version that's functional, if visually unexciting.
-            If you need better support for older browsers, consider using a post-processing
-            tool such as 
-            <a href="https://github.com/postcss/postcss-custom-properties">PostCSS Custom Properties</a>
-            to transpile the Haupia stylesheet.)
         </p>
         
         <h4 class="component-variant">License</h4>
@@ -139,25 +125,25 @@
 
             <div class="examples">
                 <div class="example example-inline">
-                    <button class="hp-button">&lt;button&gt; tag</button>
-                    <a class="hp-button">&lt;a&gt; tag</a>
-                    <input type="submit" value="&lt;input type='submit'&gt;" class="hp-button" />
-                    <span class="hp-button" role="button" tabindex="0">&lt;span&gt; tag</span>
-                    <button class="hp-button" disabled="disabled">Disabled button</button>
+                    <button class="haupia-button">&lt;button&gt; tag</button>
+                    <a href="#button" class="haupia-button">&lt;a&gt; tag</a>
+                    <input type="submit" value="&lt;input type='submit'&gt;" class="haupia-button" />
+                    <span class="haupia-button" role="button" tabindex="0">&lt;span&gt; tag</span>
+                    <button class="haupia-button" disabled="disabled">Disabled button</button>
                 </div>
             </div>
 
 
             <code class="component-code">
-            &lt;button class="hp-button"&gt;Button text&lt;/button&gt;
+            &lt;button class="haupia-button"&gt;Button text&lt;/button&gt;
             
-            &lt;a href="somewhere" class="hp-button"&gt;Button text&lt;/a&gt;
+            &lt;a href="somewhere" class="haupia-button"&gt;Button text&lt;/a&gt;
             
-            &lt;span class="hp-button" role="button" tabindex="0"&gt;
+            &lt;span class="haupia-button" role="button" tabindex="0"&gt;
                 Button text
             &lt;/span&gt;
             
-            &lt;input type="submit" class="hp-button" value="Button text" /&gt;
+            &lt;input type="submit" class="haupia-button" value="Button text" /&gt;
             </code>
 
             <h4 class="component-variant">Button sizes and variants</h4>
@@ -168,26 +154,28 @@
 
             <div class="examples">
                 <div class="example example-inline">
-                    <button class="hp-button hp-button-large">Large button</button>
-                    <button class="hp-button hp-button-small">Small button</button>
+                    <button class="haupia-button haupia-button-large">Large button</button>
+                    <button class="haupia-button haupia-button-small">Small button</button>
                 </div>
                 <div class="example example-inline">
-                    <button class="hp-button hp-button-secondary">secondary button</button>
-                    <button class="hp-button hp-button-light">light button</button>
-                    <button class="hp-button hp-button-danger">danger button</button>
-                    <button class="hp-button hp-button-clear">clear button</button>
+                    <button class="haupia-button haupia-button-secondary">secondary button</button>
+                    <button class="haupia-button haupia-button-light">light button</button>
+                    <button class="haupia-button haupia-button-danger">danger button</button>
+                    <button class="haupia-button haupia-button-clear">clear button</button>
+                    <button class="haupia-button haupia-button-text">text button</button>
+                    <button class="haupia-button haupia-button-outlined">outlined button</button>
                 </div>
             </div>
 
 
             <code class="component-code">
-            &lt;button class="hp-button hp-button-large"&gt;
+            &lt;button class="haupia-button haupia-button-large"&gt;
                 Large button
             &lt;/button&gt;
-            &lt;button class="hp-button hp-button-secondary"&gt;
+            &lt;button class="haupia-button haupia-button-secondary"&gt;
                 Secondary button
             &lt;/button&gt;
-            &lt;button class="hp-button hp-button-small hp-button-danger"&gt;
+            &lt;button class="haupia-button haupia-button-small haupia-button-danger"&gt;
                 Small danger button
             &lt;/button&gt;
             </code>
@@ -218,8 +206,8 @@
             <h3 class="component-name">Checkbox</h3>
 
             <div class="examples">
-                <input type="checkbox" class="hp-checkbox" checked="checked" />
-                <input type="checkbox" class="hp-checkbox" />
+                <input type="checkbox" class="haupia-checkbox" checked="checked" />
+                <input type="checkbox" class="haupia-checkbox" />
             </div>
 
             <h4 class="component-variant">Switch</h4>    
@@ -229,14 +217,14 @@
             </p>
 
             <div class="examples">
-                <input type="checkbox" class="hp-switch" checked="checked" />
-                <input type="checkbox" class="hp-switch" />
+                <input type="checkbox" class="haupia-switch" checked="checked" />
+                <input type="checkbox" class="haupia-switch" />
             </div>
             
             <code class="component-code">
-            &lt;input type="checkbox" class="hp-checkbox" /&gt;
+            &lt;input type="checkbox" class="haupia-checkbox" /&gt;
 
-            &lt;input type="checkbox" class="hp-switch" /&gt;
+            &lt;input type="checkbox" class="haupia-switch" /&gt;
             </code>
 
         </section>
@@ -252,13 +240,13 @@
             <h3 class="component-name">Radio buttons</h3>    
 
             <div class="examples">
-                <input type="radio" class="hp-radio" name="myradio" value="1" checked="checked"/>
-                <input type="radio" class="hp-radio" name="myradio" value="2" />
+                <input type="radio" class="haupia-radio" name="myradio" value="1" checked="checked"/>
+                <input type="radio" class="haupia-radio" name="myradio" value="2" />
 
             </div>
 
             <code class="component-code">
-            &lt;input type="radio" class="hp-radio" name="exampleRadio" value="exampleValue" /&gt;
+            &lt;input type="radio" class="haupia-radio" name="exampleRadio" value="exampleValue" /&gt;
             </code>
 
             <h4 class="component-variant">Radio buttonbar</h4>
@@ -267,20 +255,20 @@
             </p>
 
             <div class="examples">
-                <fieldset class="hp-radio-buttonbar" role="toolbar">
+                <fieldset class="haupia-radio-buttonbar" role="radiogroup">
                     <input type="radio" id="myradio-buttonbar1" name="myradio-buttonbar" value="1" checked="checked" />
-                    <label class="hp-radio-buttonbar-button" for="myradio-buttonbar1">Radio 1</label>
+                    <label class="haupia-radio-buttonbar-button" for="myradio-buttonbar1">Radio 1</label>
                     <input type="radio" id="myradio-buttonbar2" name="myradio-buttonbar" value="2" />
-                    <label class="hp-radio-buttonbar-button" for="myradio-buttonbar2">Radio 2</label>
+                    <label class="haupia-radio-buttonbar-button" for="myradio-buttonbar2">Radio 2</label>
                     <input type="radio" id="myradio-buttonbar3" name="myradio-buttonbar" value="3" />
-                    <label class="hp-radio-buttonbar-button" for="myradio-buttonbar3">Radio 3</label>
+                    <label class="haupia-radio-buttonbar-button" for="myradio-buttonbar3">Radio 3</label>
                 </fieldset>
             </div>
 
             <code class="component-code">
-            &lt;fieldset class="hp-radio-buttonbar" role="toolbar"&gt;
+            &lt;fieldset class="haupia-radio-buttonbar" role="toolbar"&gt;
                 &lt;input type="radio" id="exampleRadio1" name="exampleRadio" value="exampleValue" /&gt;
-                &lt;label class="hp-radio-buttonbar-button" for="exampleRadio1"&gt;
+                &lt;label class="haupia-radio-buttonbar-button" for="exampleRadio1"&gt;
                     Button Text
                 &lt;/label&gt;
             &lt;/fieldset&gt;
@@ -295,14 +283,14 @@
             <h3 class="component-name">Dropdown</h3>
 
             <div class="examples">
-                <select class="hp-select">
+                <select class="haupia-select">
                     <option>Option 1</option>
                     <option>Option 2</option>
                 </select>
             </div>
 
             <code class="component-code">
-            &lt;select class="hp-select"&gt;
+            &lt;select class="haupia-select"&gt;
                 &lt;option&gt;Option 1&lt;/option&gt;
                 &lt;option&gt;Option 2&lt;/option&gt;
             &lt;/select&gt;
@@ -319,19 +307,19 @@
 
             <h3 class="component-name">Text input</h3>
             <div class="examples">
-                <input type="text" class="hp-input-text" />
+                <input type="text" class="haupia-input-text" />
             </div>
 
             <h3 class="component-name">Textarea</h3>
             <div class="examples">
-                <textarea class="hp-textarea"></textarea>
+                <textarea class="haupia-textarea"></textarea>
             </div>
 
 
             <code class="component-code">
-            &lt;input type="text" class="hp-input-text" /&gt;
+            &lt;input type="text" class="haupia-input-text" /&gt;
 
-            &lt;textarea class="hp-textarea"&gt;&lt;/textarea&gt;
+            &lt;textarea class="haupia-textarea"&gt;&lt;/textarea&gt;
             </code>
 
 
@@ -351,42 +339,42 @@
 
             <div class="examples">
                 <div class="example">
-                    <div class="hp-input-group">
-                        <span class="hp-input-group-static">$</span>
-                        <input type="text" class="hp-input-text" />
-                        <span class="hp-input-group-static">.00</span>
+                    <div class="haupia-input-group">
+                        <span class="haupia-input-group-static">$</span>
+                        <input type="text" class="haupia-input-text" />
+                        <span class="haupia-input-group-static">.00</span>
                     </div>
                 </div>
                 <div class="example">
-                    <div class="hp-input-group">
-                        <span class="hp-input-group-static">@</span>
-                        <input type="text" class="hp-input-text" />
+                    <div class="haupia-input-group">
+                        <span class="haupia-input-group-static">@</span>
+                        <input type="text" class="haupia-input-text" />
                     </div>
                 </div>
                 <div class="example">    
-                    <div class="hp-input-group">
-                        <input type="text" class="hp-input-text" />
-                        <span class="hp-input-group-static">@haupia.com</span>
+                    <div class="haupia-input-group">
+                        <input type="text" class="haupia-input-text" />
+                        <span class="haupia-input-group-static">@haupia.yum</span>
                     </div>
                 </div>
                 <div class="example">    
-                    <div class="hp-input-group" role="group">
-                        <input type="text" class="hp-input-text" />
-                        <input type="submit" value="Search" class="hp-button" />
+                    <div class="haupia-input-group" role="group">
+                        <input type="text" class="haupia-input-text" />
+                        <input type="submit" value="Search" class="haupia-button" />
                     </div>
                 </div>
             </div>
 
             <code class="component-code">
-            &lt;div class="hp-input-group"&gt;
-                &lt;span class="hp-input-group-static"&gt;$&lt;/span&gt;
-                &lt;input type="text" class="hp-input-text" /&gt;
-                &lt;span class="hp-input-group-static"&gt;.00&lt;/span&gt;
+            &lt;div class="haupia-input-group"&gt;
+                &lt;span class="haupia-input-group-static"&gt;$&lt;/span&gt;
+                &lt;input type="text" class="haupia-input-text" /&gt;
+                &lt;span class="haupia-input-group-static"&gt;.00&lt;/span&gt;
             &lt;/div&gt;
 
-            &lt;div class="hp-input-group" role="group"&gt;
-                &lt;input type="text" class="hp-input-text" /&gt;
-                &lt;input type="submit" value="Search" class="hp-button" /&gt;
+            &lt;div class="haupia-input-group" role="group"&gt;
+                &lt;input type="text" class="haupia-input-text" /&gt;
+                &lt;input type="submit" value="Search" class="haupia-button" /&gt;
             &lt;/div&gt;
             </code>
 
@@ -403,25 +391,25 @@
 
             <div class="examples">
                 <div class="example example-inline">
-                    <input type="checkbox" class="hp-checkbox" disabled="disabled" />
-                    <input type="checkbox" class="hp-switch" disabled="disabled" />
-                    <input type="radio" class="hp-radio" disabled="disabled" />
+                    <input type="checkbox" class="haupia-checkbox" disabled="disabled" />
+                    <input type="checkbox" class="haupia-switch" disabled="disabled" />
+                    <input type="radio" class="haupia-radio" disabled="disabled" />
 		        </div>
 
                 <div class="example example-inline">
-                    <select class="hp-select" disabled="disabled">
+                    <select class="haupia-select" disabled="disabled">
                         <option>Disabled dropdown</option>
                     </select>
 
-                    <input type="text" class="hp-input-text" value="Disabled" disabled="disabled"/>
+                    <input type="text" class="haupia-input-text" value="Disabled" disabled="disabled"/>
                 </div>
                 
                 <div class="example">
-                    <div class="hp-radio-buttonbar">
+                    <div class="haupia-radio-buttonbar">
                         <input type="radio" id="myDradio-buttonbar1" name="myDradio-buttonbar" value="1" checked="checked" disabled="disabled" />
-                        <label class="hp-radio-buttonbar-button" for="myDradio-buttonbar1">Disabled 1</label>
+                        <label class="haupia-radio-buttonbar-button" for="myDradio-buttonbar1">Disabled 1</label>
                         <input type="radio" id="myDradio-buttonbar2" name="myDradio-buttonbar" value="2" disabled="disabled" />
-                        <label class="hp-radio-buttonbar-button" for="myDradio-buttonbar2">Disabled 2</label>
+                        <label class="haupia-radio-buttonbar-button" for="myDradio-buttonbar2">Disabled 2</label>
                     </div>
                 </div>
             </div>
@@ -441,56 +429,6 @@
 
     <div class="items">
 
-    <a name="progress"></a>
-    <a name="progress-bar"></a>
-    <a name="progressbar"></a>
-    <section class="item">
-
-        <h3 class="component-name">Progress</h3>
-        <p class="description">
-            This is a styled version of the <code>progress</code> tag,
-            a visual meter.
-            (To show progress along a series of steps, see Progress List below.)
-        </p>
-        <div class="examples">
-            <progress class="hp-progress" value="70" max="100"></progress>
-        </div>
-
-
-        <code class="component-code">
-        &lt;progress class="hp-progress" value="0" max="100"&gt;&lt;/progress&gt;
-        </code>
-
-    </section>
-
-    <a name="progress-list"></a>
-    <a name="progresslist"></a>
-    <a name="progress-steps"></a>
-    <a name="progresssteps"></a>
-    <section class="item">
-
-        <h3 class="component-name">Progress List</h3>
-        <p class="description">
-            The progress list shows the current progress along a series of steps.
-        </p>
-        <div class="examples">
-            <ul class="hp-progress-list">
-                <li class="hp-progress-list-complete">Completed step</li>
-                <li class="hp-progress-list-current" aria-current="step">Current step</li>
-                <li>Future step</li>
-            </ul>
-        </div>
-
-        <code class="component-code">
-        &lt;ul class="hp-progress-list"&gt;
-            &lt;li class="hp-progress-list-complete"&gt;Completed step&lt;/li&gt;
-            &lt;li class="hp-progress-list-current" aria-current="step"&gt;Current step&lt;/li&gt;
-            &lt;li&gt;Future step&lt;/li&gt;
-        &lt;/ul&gt;
-        </code>
-
-    </section>
-
     <a name="alert"></a>
     <a name="notification"></a>
     <section class="item">
@@ -498,29 +436,29 @@
         <h3 class="component-name">Alert</h3>
         <div class="examples">
             <div class="example">
-                <div class="hp-alert" role="alert">I am a default alert.</div>
+                <div class="haupia-alert" role="alert">I am a default alert.</div>
             </div>
             <div class="example">
-                <div class="hp-alert hp-alert-error" role="alert">I am an error alert.</div>
+                <div class="haupia-alert haupia-alert-error" role="alert">I am an error alert.</div>
             </div>
             <div class="example">
-                <div class="hp-alert hp-alert-warning" role="alert">I am a warning alert.</div>
+                <div class="haupia-alert haupia-alert-warning" role="alert">I am a warning alert.</div>
             </div>
             <div class="example">
-                <div class="hp-alert hp-alert-success" role="alert">I am a success alert.</div>
+                <div class="haupia-alert haupia-alert-success" role="alert">I am a success alert.</div>
             </div>
             <div class="example">
-                <div class="hp-alert hp-alert-info" role="alert">I am an info alert.</div>
+                <div class="haupia-alert haupia-alert-info" role="alert">I am an info alert.</div>
             </div>
         </div>
 
 
         <code class="component-code">
-        &lt;div class="hp-alert" role="alert"&gt;
+        &lt;div class="haupia-alert" role="alert"&gt;
             I am a default alert.
         &lt;/div&gt;
         
-        &lt;div class="hp-alert hp-alert-error" role="alert"&gt;
+        &lt;div class="haupia-alert haupia-alert-error" role="alert"&gt;
             I am an error alert.
         &lt;/div&gt;
         
@@ -532,20 +470,27 @@
             Alerts can be dismissable; a click on the "x" icon will hide the alert.
         </p>
         <div class="examples">
-            <input type="checkbox" checked="checked" id="myDismissibleAlert" class="hp-alert-dismiss-checkbox" />
-            <div class="hp-alert hp-alert-info">
+            
+            <div class="haupia-alert haupia-alert-info">
                 I am an info alert that is dismissible.
-                <label for="myDismissibleAlert" class="hp-alert-dismiss" />
+                
+                <input type="checkbox" id="myDismissibleAlert" class="haupia-close-button-checkbox" />
+                <label for="myDismissibleAlert" class="haupia-close-button">
+                    <span class="haupia-visually-hidden">Dismiss this alert</span>
+                </label>
             </div>
         </div>
 
 
         <code class="component-code">
-        &lt;input type="checkbox" checked="checked" id="exampleDismissibleAlert" class="hp-alert-dismiss-checkbox" /&gt;
-        &lt;div class="hp-alert hp-alert-info"&gt;
-            I am an info alert that is dismissible.
-            &lt;label for="exampleDismissibleAlert" class="hp-alert-dismiss" /&gt;
-        &lt;/div&gt;
+            &lt;input type="checkbox" id="myDismissibleAlert" 
+                class="haupia-close-button-checkbox" /&gt;
+            &lt;label for="myDismissibleAlert" 
+                class="haupia-close-button"&gt;
+                &lt;span class="haupia-visually-hidden"&gt;
+                    Dismiss this alert
+                &lt;/span&gt;
+            &lt;/label&gt;
         </code>
 
 
@@ -557,16 +502,18 @@
 
         <h3 class="component-name">Breadcrumbs</h3>
         <div class="examples">
-            <ul class="hp-breadcrumbs" role="navigation">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li>Not a Link 3</li>
-            </ul>
+            <nav class="haupia-breadcrumbs">
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li>Not a Link 3</li>
+                </ul>
+            </nav>
         </div>
 
 
         <code class="component-code">
-        &lt;ul class="hp-breadcrumbs" role="navigation"&gt;
+        &lt;ul class="haupia-breadcrumbs" role="navigation"&gt;
             &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;Not a Link 3&lt;/li&gt;
@@ -584,11 +531,11 @@
 
         <h3 class="component-name">Loading spinner</h3>
         <div class="examples">
-            <span class="hp-spinner" aria-live="polite" role="status"></span>
+            <span class="haupia-spinner" aria-live="polite" role="status"></span>
         </div>
 
         <code class="component-code">
-        &lt;span class="hp-spinner" aria-live="polite" role="status"&gt;&lt;span&gt;
+        &lt;span class="haupia-spinner" aria-live="polite" role="status"&gt;&lt;span&gt;
         </code>
 
 
@@ -601,29 +548,82 @@
         <div class="examples">
             <div class="example">
                 <p>
-                    A paragraph of text with a <span class="hp-badge">badge</span> in it.
+                    A paragraph of text with a <span class="haupia-badge">badge</span> in it.
                 </p>
             </div>
-            <div class="example">
-                <button class="hp-button">Button with indicator number badge <span class="hp-badge hp-badge-light">N</span></button>
-            </div>
             <div class="example example-inline">
-                <span class="hp-badge">default</span>
-                <span class="hp-badge hp-badge-secondary">secondary</span>
-                <span class="hp-badge hp-badge-danger">danger</span>
-                <span class="hp-badge hp-badge-light">light</span>
+                <span class="haupia-badge">default</span>
+                <span class="haupia-badge haupia-badge-secondary">secondary</span>
+                <span class="haupia-badge haupia-badge-danger">danger</span>
+                <span class="haupia-badge haupia-badge-light">light</span>
+            </div>
+
+            <p>You can also use a badge to show a number:</p>
+            <div class="example">
+                <button class="haupia-button">Checkout <span class="haupia-badge haupia-badge-light">3</span></button>
             </div>
         </div>
 
 
         <code class="component-code">
-        &lt;span class="hp-badge"&gt;default badge&lt;/span&gt;
+        &lt;span class="haupia-badge"&gt;default badge&lt;/span&gt;
 
-        &lt;span class="hp-badge hp-badge-secondary"&gt;secondary badge&lt;/span&gt;
+        &lt;span class="haupia-badge haupia-badge-secondary"&gt;secondary badge&lt;/span&gt;
         </code>
 
 
     </section>
+
+    <a name="progress"></a>
+    <a name="progress-bar"></a>
+    <a name="progressbar"></a>
+    <section class="item">
+
+        <h3 class="component-name">Progress</h3>
+        <p class="description">
+            This is a styled version of the <code>progress</code> tag,
+            a visual meter.
+            (To show progress along a series of steps, see Progress List below.)
+        </p>
+        <div class="examples">
+            <progress class="haupia-progress" value="70" max="100"></progress>
+        </div>
+
+
+        <code class="component-code">
+        &lt;progress class="haupia-progress" value="70" max="100"&gt;&lt;/progress&gt;
+        </code>
+
+    </section>
+
+    <a name="progress-list"></a>
+    <a name="progresslist"></a>
+    <a name="progress-steps"></a>
+    <a name="progresssteps"></a>
+    <section class="item">
+
+        <h3 class="component-name">Progress List</h3>
+        <p class="description">
+            The progress list shows the current progress along a series of steps.
+        </p>
+        <div class="examples">
+            <ul class="haupia-progress-list">
+                <li class="haupia-progress-list-complete">Completed step</li>
+                <li class="haupia-progress-list-current" aria-current="step">Current step</li>
+                <li>Future step</li>
+            </ul>
+        </div>
+
+        <code class="component-code">
+        &lt;ul class="haupia-progress-list"&gt;
+            &lt;li class="haupia-progress-list-complete"&gt;Completed step&lt;/li&gt;
+            &lt;li class="haupia-progress-list-current" aria-current="step"&gt;Current step&lt;/li&gt;
+            &lt;li&gt;Future step&lt;/li&gt;
+        &lt;/ul&gt;
+        </code>
+
+    </section>
+
     </div>
 
 </section>
@@ -644,16 +644,16 @@
 
         <h3 class="component-name">Tooltip</h3>
         <div class="examples">
-            <div class="hp-tooltip">
+            <div class="haupia-tooltip">
                 <p>Hover over me to see a tooltip.</p>
-                <aside class="hp-tooltip-content" role="tooltip">I am the tooltip content!</aside>
+                <aside class="haupia-tooltip-content" role="tooltip">I am the tooltip content!</aside>
             </div>
         </div>
 
         <code class="component-code">
-        &lt;div class="hp-tooltip"&gt;
+        &lt;div class="haupia-tooltip"&gt;
             &lt;p&gt;I am the regular content.&lt;/p&gt;
-            &lt;aside class="hp-tooltip-content" role="tooltip"&gt;
+            &lt;aside class="haupia-tooltip-content" role="tooltip"&gt;
                 I am the tooltip content.
             &lt;/aside&gt;
         &lt;/div&gt;
@@ -661,109 +661,151 @@
 
     </section>
 
-    <a name="collapsible"></a>
-    <a name="collapse"></a>
     <a name="accordion"></a>
     <section class="item">
 
-        <h3 class="component-name">Collapsible</h3>
-        <p class="description">For content that collapses and expands. Content is expanded if the control's checkbox is checked.</p>
+        <h3 class="component-name">Accordion</h3>
+        <p class="description">For content that collapses and expands.</p>
         <div class="examples">
-            <div class="hp-collapsible">
-                <input type="checkbox" id="mycollapsible" />
-                <label class="hp-collapsible-header" for="mycollapsible">Click me to expand/collapse</label>
-                <div class="hp-collapsible-body">
-                    <div class="hp-collapsible-content">
-                        I am the collapsible's content.<br />
-                        I am the collapsible's content.<br />
-                        I am the collapsible's content.<br />
-                        I am the collapsible's content.<br />
+            <div class="haupia-accordion">
+                <details class="haupia-details">
+                    <summary class="haupia-summary">Click me to expand/collapse</summary>
+                    <div class="haupia-details-content">
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
                     </div>
-                </div>
+                </details>
+            </div>
+
+            <h4>An accordion with multiple panels:</h4>
+            <div class="haupia-accordion">
+                <details class="haupia-details">
+                    <summary class="haupia-summary">Click me to expand/collapse</summary>
+                    <div class="haupia-details-content">
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                    </div>
+                </details>
+                <details class="haupia-details">
+                    <summary class="haupia-summary">Click me to expand/collapse</summary>
+                    <div class="haupia-details-content">
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                    </div>
+                </details>
+                <details class="haupia-details">
+                    <summary class="haupia-summary">Click me to expand/collapse</summary>
+                    <div class="haupia-details-content">
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                    </div>
+                </details>
             </div>
         </div>
 
         <code class="component-code">
-        &lt;div class="hp-collapsible"&gt;
-            &lt;input type="checkbox" id="exampleCollapsible" /&gt;
-            &lt;label class="hp-collapsible-header" for="exampleCollapsible"&gt;
-                Collapsible's Header
-            &lt;/label&gt;
-            &lt;div class="hp-collapsible-body"&gt;
-                &lt;div class="hp-collapsible-content"&gt;
-                    I am the collapsible's content.
-                &lt;/div&gt;
+            &lt;div class="haupia-accordion"&gt;
+                &lt;details class="haupia-details"&gt;
+                    &lt;summary class="haupia-summary"&gt;
+                        Click me to expand/collapse
+                    &lt;/summary&gt;
+                    &lt;div class="haupia-details-content"&gt;
+                        I am the accordion content.
+                    &lt;/div&gt;
+                &lt;/details&gt;
             &lt;/div&gt;
-        &lt;/div&gt;
         </code>
 
         <h4 class="component-variant">with header text that changes</h4>
-        <p class="description">Collapsibles can be set to have different header text when expanded vs. collapsed.</p>
+        <p class="description">Accordions can be set to have different header text when expanded vs. collapsed.</p>
         <div class="examples">
-            <div class="hp-collapsible">
-                <input type="checkbox" id="mycollapsible2" />
-                <label class="hp-collapsible-header" for="mycollapsible2">
-                    <span class="hp-collapsible-header-collapsed">See More</span>
-                    <span class="hp-collapsible-header-expanded">See Less</span>
-                </label>
-                <div class="hp-collapsible-body">
-                    <div class="hp-collapsible-content">
-                        I am the collapsible's content.<br />
-                        I am the collapsible's content.<br />
-                        I am the collapsible's content.<br />
-                        I am the collapsible's content.<br />
+            <div class="haupia-accordion">
+                <details class="haupia-details">
+                    <summary class="haupia-summary">
+                        <span class="haupia-summary-content-closed">See More</span>
+                        <span class="haupia-summary-content-open">See Less</span>
+                    </summary>
+                    <div class="haupia-details-content">
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
                     </div>
-                </div>
+                </details>
             </div>
         </div>
-
+        
         <code class="component-code">
-        &lt;div class="hp-collapsible"&gt;
-            &lt;input type="checkbox" id="exampleCollapsible" /&gt;
-            &lt;label class="hp-collapsible-header" for="exampleCollapsible"&gt;
-                &lt;span class="hp-collapsible-header-collapsed"&gt;
-                    Header When Collapsed
-                &lt;/span&gt;
-                &lt;span class="hp-collapsible-header-expanded"&gt;
-                    Header When Expanded
-                &lt;/span&gt;
-            &lt;/label&gt;
-            &lt;div class="hp-collapsible-body"&gt;
-                &lt;div class="hp-collapsible-content"&gt;
-                    I am the collapsible's content.
-                &lt;/div&gt;
+            &lt;div class="haupia-accordion"&gt;
+                &lt;details class="haupia-details"&gt;
+                    &lt;summary class="haupia-summary"&gt;
+                        &lt;span class="haupia-summary-content-closed"&gt;
+                            See More
+                        &lt;/span&gt;
+                        &lt;span class="haupia-summary-content-open"&gt;
+                            See Less
+                        &lt;/span&gt;
+                    &lt;/summary&gt;
+                    &lt;div class="haupia-details-content"&gt;
+                        I am the accordion content.
+                    &lt;/div&gt;
+                &lt;/details&gt;
             &lt;/div&gt;
-        &lt;/div&gt;
         </code>
         
         <h4 class="component-variant">with unstyled content</h4>
         <p class="description">
-            Adding the class <code>hp-collapsible-unstyled</code> to the collapsible will
-            make the content unstyled and un-bordered.
+            An "unstyled" accordion removes the bounding border and the inset on the text.
         </p>
         <div class="examples">
-            <div class="hp-collapsible hp-collapsible-unstyled">
-                <input type="checkbox" id="mycollapsible3" />
-                <label class="hp-collapsible-header" for="mycollapsible3">Click me to expand/collapse</span>
-                </label>
-                <div class="hp-collapsible-body">
-                    <div class="hp-collapsible-content">
-                        I am the collapsible's content.<br />
-                        I am the collapsible's content.<br />
-                        I am the collapsible's content.<br />
-                        I am the collapsible's content.<br />
+            <div class="haupia-accordion haupia-accordion-unstyled">
+                <p>Here is some text content above the unstyled accordion.</p>
+                <details class="haupia-details">
+                    <summary class="haupia-summary">Click me to expand/collapse</summary>
+                    <div class="haupia-details-content">
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
                     </div>
-                </div>
+                </details>
+                <details class="haupia-details">
+                    <summary class="haupia-summary">Click me to expand/collapse</summary>
+                    <div class="haupia-details-content">
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                    </div>
+                </details>
+                <details class="haupia-details">
+                    <summary class="haupia-summary">Click me to expand/collapse</summary>
+                    <div class="haupia-details-content">
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                    </div>
+                </details>
             </div>
+
         </div>
 
         <code class="component-code">
-        // as above, but add class "hp-collapsible-unstyled"
-        // to the outer container.
+        // as above, but add class "haupia-accordion-unstyled"
+        // to the accordion.
         </code>
 
     </section>
-
+    
     <a name="tabs"></a>
     <a name="tab"></a>
     <section class="item">
@@ -771,22 +813,22 @@
         <h3 class="component-name">Tabs</h3>
         <p class="description">Tabs use radio buttons to control which tab is shown. Set the default tab's radio button to checked.</p>
         <div class="examples">
-            <div class="hp-tabs" role="tablist">
+            <div class="haupia-tabs" role="tablist">
               <input type="radio" name="mytabs" value="1" id="tab1" checked="checked" role="tab" aria-controls="tabpanel1">
               <label for="tab1" id="tablabel1">Tab 1</label>
-              <div class="hp-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel1">
+              <div class="haupia-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel1">
                  Tab 1 content
               </div>
               
               <input type="radio" name="mytabs" value="2" id="tab2" role="tab" aria-controls="tabpanel2">
               <label for="tab2" id="tablabel2">Tab 2</label>
-              <div class="hp-tabs-content" id="tabpanel2" role="tabpanel" aria-labelledby="tablabel2">
+              <div class="haupia-tabs-content" id="tabpanel2" role="tabpanel" aria-labelledby="tablabel2">
                  Tab 2 content
               </div>
               
               <input type="radio" name="mytabs" value="3" id="tab3" disabled="disabled" role="tab" aria-controls="tabpanel3">
               <label for="tab3" id="tablabel3">Disabled</label>
-              <div class="hp-tabs-content" id="tabpanel3" role="tabpanel" aria-labelledby="tablabel3">
+              <div class="haupia-tabs-content" id="tabpanel3" role="tabpanel" aria-labelledby="tablabel3">
                  Tab 3 content
               </div>
             </div>
@@ -794,16 +836,16 @@
 
 
         <code class="component-code">
-        &lt;div class="hp-tabs" role="tablist"&gt;
+        &lt;div class="haupia-tabs" role="tablist"&gt;
             &lt;input type="radio" name="exampleTabs" value="1" id="exampleTab1" checked="checked" role="tab" aria-controls="tabpanel1"&gt;
             &lt;label for="exampleTab1" id="tablabel1"&gt;Tab 1&lt;/label&gt;
-            &lt;div class="hp-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel1"&gt;
+            &lt;div class="haupia-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel1"&gt;
                 Tab 1 content, shown by default
             &lt;/div&gt;
           
             &lt;input type="radio" name="exampleTabs" value="2" id="exampleTab2" role="tab" aria-controls="tabpanel2"&gt;
             &lt;label for="exampleTab2" id="tablabel2"&gt;Tab 2&lt;/label&gt;
-            &lt;div class="hp-tabs-content" id="tabpanel2" role="tabpanel" aria-labelledby="tablabel2"&gt;
+            &lt;div class="haupia-tabs-content" id="tabpanel2" role="tabpanel" aria-labelledby="tablabel2"&gt;
                 Tab 2 content
             &lt;/div&gt;
         &lt;/div&gt;
@@ -815,29 +857,29 @@
             The "simple" variant gives the tabs a simpler display.
         </p>
         <div class="examples">
-            <div class="hp-tabs hp-tabs-simple" role="tablist">
+            <div class="haupia-tabs haupia-tabs-simple" role="tablist">
               <input type="radio" name="mytabssimple" value="1" id="tab-s1" checked="checked" role="tab" aria-controls="tabpanel-s1">
               <label for="tab-s1" id="tablabel-s1">Tab 1</label>
-              <div class="hp-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel-s1">
+              <div class="haupia-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel-s1">
                  Tab 1 content using "simple" variant
               </div>
               
               <input type="radio" name="mytabssimple" value="2" id="tab-s2" role="tab" aria-controls="tabpanel-s2">
               <label for="tab-s2" id="tablabel-s2">Tab 2</label>
-              <div class="hp-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel-s2">
+              <div class="haupia-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel-s2">
                  Tab 2 content using "simple" variant
               </div>
               
               <input type="radio" name="mytabssimple" value="3" id="tab-s3" disabled="disabled" role="tab" aria-controls="tabpanel-s3">
               <label for="tab-s3" id="tablabel-s3">Disabled Tab</label>
-              <div class="hp-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel-s3">
+              <div class="haupia-tabs-content" id="tabpanel1" role="tabpanel" aria-labelledby="tablabel-s3">
                  Tab 3 content using "simple" variant
               </div>
             </div>
         </div>
 
         <code class="component-code">
-        // as above, but add class "hp-tabs-simple" 
+        // as above, but add class "haupia-tabs-simple" 
         // to the outermost container
         </code>
 
@@ -867,40 +909,40 @@
             </p>
 
             <div class="examples">
-                <h1 class="hp-h1">H1 with class "hp-h1"</h1>
-                <h2 class="hp-h2">H2 with class "hp-h2"</h2>
-                <h3 class="hp-h3">H3 with class "hp-h3"</h3>
-                <h4 class="hp-h4">H4 with class "hp-h4"</h4>
-                <h5 class="hp-h5">H5 with class "hp-h5"</h5>
-                <h6 class="hp-h6">H6 with class "hp-h6"</h6>
-                <h1 class="hp-h3">H1 using class "hp-h3" instead of "hp-h1"</h1>
+                <h1 class="haupia-h1">H1 with class "haupia-h1"</h1>
+                <h2 class="haupia-h2">H2 with class "haupia-h2"</h2>
+                <h3 class="haupia-h3">H3 with class "haupia-h3"</h3>
+                <h4 class="haupia-h4">H4 with class "haupia-h4"</h4>
+                <h5 class="haupia-h5">H5 with class "haupia-h5"</h5>
+                <h6 class="haupia-h6">H6 with class "haupia-h6"</h6>
+                <h1 class="haupia-h3">H1 using class "haupia-h3" instead of "haupia-h1"</h1>
             </div>
 
             <code class="component-code">
-            &lt;h1 class="hp-h1"&gt;Heading Level 1&lt;/h1&gt;
+            &lt;h1 class="haupia-h1"&gt;Heading Level 1&lt;/h1&gt;
             </code>
 
-            <h4 class="component-variant">Inside a block with class "hp-type":</h4>
+            <h4 class="component-variant">Inside a block with class "haupia-type":</h4>
             <p class="description">
                 For convenience, you can also wrap a section with the class
-                <code>hp-type</code>. Any headings inside that section 
+                <code>haupia-type</code>. Any headings inside that section 
                 will then automatically get Haupia's heading styling.
             </p>
             <div class="examples">
-                <div class="hp-type">        
+                <div class="haupia-type">        
                     <h1>H1 with no class on it</h1>
                     <h2>H2 with no class on it</h2>
                     <h3>H3 with no class on it</h3>
                     <h4>H4 with no class on it</h4>
                     <h5>H5 with no class on it</h5>
                     <h6>H6 with no class on it</h6>
-                    <h1 class="hp-h3">H1 using class "hp-h3"</h1>
+                    <h1 class="haupia-h3">H1 using class "haupia-h3"</h1>
                 </div>
             </div>
 
 
             <code class="component-code">
-            &lt;div class="hp-type"&gt;
+            &lt;div class="haupia-type"&gt;
                 &lt;h1&gt;Heading Level 1&lt;/h1&gt;
             &lt;/div&gt;
             </code>
@@ -913,14 +955,14 @@
 
             <h3 class="component-name">Blockquote</h3>
             <div class="examples">
-                <blockquote class="hp-blockquote">
+                <blockquote class="haupia-blockquote">
                     I am a blockquote, used for quotes that are longer pieces of text.
                 </blockquote>
             </div>
 
 
             <code class="component-code">
-            &lt;blockquote class="hp-blockquote"&gt;
+            &lt;blockquote class="haupia-blockquote"&gt;
                 Blockquote text goes here.
             &lt;/blockquote&gt;
             </code>
@@ -935,14 +977,14 @@
             <h3 class="component-name">Lists</h3>
             <div class="examples">
                 <div class="example">
-                    <ul class="hp-ul">
+                    <ul class="haupia-ul">
                         <li>Unordered List 1</li>
                         <li>Unordered List 2</li>
                         <li>Unordered List 3</li>
                     </ul>
                 </div>
                 <div class="example">
-                    <ol class="hp-ol">
+                    <ol class="haupia-ol">
                         <li>Ordered List 1</li>
                         <li>Ordered List 2</li>
                         <li>Ordered List 3</li>
@@ -957,7 +999,7 @@
                 useful when your items are semantically a list, but shouldn't appear as one.
             </p>
             <div class="examples">
-                <ul class="hp-ul hp-ul-unstyled">
+                <ul class="haupia-ul haupia-ul-unstyled">
                     <li>Unordered List 1</li>
                     <li>Unordered List 2</li>
                     <li>Unordered List 3</li>
@@ -966,17 +1008,17 @@
 
 
             <code class="component-code">
-            &lt;ul class="hp-ul"&gt;
+            &lt;ul class="haupia-ul"&gt;
                 &lt;li&gt;Unordered List 1&lt;/li&gt;
                 &lt;li&gt;Unordered List 2&lt;/li&gt;
             &lt;/ul&gt;
 
-            &lt;ol class="hp-ol"&gt;
+            &lt;ol class="haupia-ol"&gt;
                 &lt;li&gt;Ordered List 1&lt;/li&gt;
                 &lt;li&gt;Ordered List 2&lt;/li&gt;
             &lt;/ol&gt;
 
-            &lt;ul class="hp-ul hp-ul-unstyled"&gt;
+            &lt;ul class="haupia-ul haupia-ul-unstyled"&gt;
                 &lt;li&gt;Unordered List 1&lt;/li&gt;
                 &lt;li&gt;Unordered List 2&lt;/li&gt;
             &lt;/ul&gt;
@@ -993,17 +1035,17 @@
             <h3 class="component-name">Text alignment</h3>
 
             <div class="examples">
-                <p class="hp-text-left">Text aligned left.</p>
-                <p class="hp-text-center">Text aligned center.</p>
-                <p class="hp-text-right">Text aligned right.</p>
-                <h5 class="hp-h5 hp-text-right">H5 with "hp-h5" and aligned right.</h5>
+                <p class="haupia-text-left">Text aligned left.</p>
+                <p class="haupia-text-center">Text aligned center.</p>
+                <p class="haupia-text-right">Text aligned right.</p>
+                <h5 class="haupia-h5 haupia-text-right">H5 with "haupia-h5" and aligned right.</h5>
             </div>
 
 
             <code class="component-code">
-            &lt;p class="hp-text-left"&gt;Text aligned left.&lt;/p&gt;
-            &lt;p class="hp-text-center"&gt;Text aligned center.&lt;/p&gt;
-            &lt;p class="hp-text-right"&gt;Text aligned right.&lt;/p&gt;
+            &lt;p class="haupia-text-left"&gt;Text aligned left.&lt;/p&gt;
+            &lt;p class="haupia-text-center"&gt;Text aligned center.&lt;/p&gt;
+            &lt;p class="haupia-text-right"&gt;Text aligned right.&lt;/p&gt;
             </code>
 
 
@@ -1016,21 +1058,23 @@
 
             <h3 class="component-name">Code block</h3>
             <div class="examples">
-                <code class="hp-code-block">
+                <pre class="haupia-code-block"><code>
 &lt;p&gt;Code line 1&lt;/p&gt;
 &lt;p&gt;Code line 2&lt;/p&gt;
 &lt;p&gt;Code line 3 is really, really long and will likely be wider than the bounding box, because holy cats, is this a long line.&lt;/p&gt;
 &lt;p&gt;Code line 4&lt;/p&gt;
 &lt;p&gt;Code line 5&lt;/p&gt;
 &lt;p&gt;Code line 6&lt;/p&gt;
-                </code>
+                </code></pre>
             </div>
 
 
             <code class="component-code">
-            &lt;code class="hp-code-block"&gt;
-                Code example goes here
-            &lt;/code&gt;
+            &lt;pre class="haupia-code-block"&gt;
+                &lt;code&gt;
+                    Code example goes here
+                &lt;/code&gt;
+            &lt;/pre&gt;
             </code>
 
         </section>
@@ -1039,236 +1083,30 @@
 
 </section>
 
-<a name="all"></a>
+<a name="browser"></a>
 <section class="category">
 
     <div class="category-overview">
-        <h2 class="category-name">Putting It All Together</h2>
+        <h2 class="category-name">Browser Support</h2>
     </div>
 
-    <div class="items">
-        <p class="description">Here's everything at once, so you can get a visual overview:</p>
+    <div class="items intro">
 
-        <div class="examples">
-
-            <div class="example example-inline">
-                
-                <button class="hp-button">&lt;button&gt; tag</button>
-                <a href="#" class="hp-button">&lt;a&gt; tag</a>
-                <input type="submit" value="&lt;input type='submit'&gt;" class="hp-button" />
-                <button class="hp-button" disabled="disabled">Disabled button</button>
-                
-                <button class="hp-button hp-button-secondary">secondary button</button>
-                <button class="hp-button hp-button-light">light button</button>
-                <button class="hp-button hp-button-danger">danger button</button>
-                <button class="hp-button hp-button-clear">clear button</button>
-            </div>
+        <p>
+            What makes Haupia's code so simple is its extensive use of 
+            CSS custom properties (aka CSS variables) and CSS filters, so 
+            it works in any browser that supports these features
+            (which is <a href="https://caniuse.com/#feat=css-variables">basically all modern browsers</a>).
+        </p>
+        <p>
+            The close buttons inside dismissible Alerts use the <code>:has</code> feature of CSS, which as of 
+            May 2023 is <a href="https://caniuse.com/css-has">not supported</a> by Firefox and some older versions of Safari.
+            If those browsers are on your supported browser list, you should
+            avoid using dismissible Alerts, since clicking on the close button will not 
+            close the component.
+        </p>
             
-            <div class="example example-inline">    
-                <input type="checkbox" class="hp-checkbox" />
-                <input type="checkbox" class="hp-checkbox" disabled="disabled" />
-                
-                <input type="checkbox" class="hp-switch" />
-                <input type="checkbox" class="hp-switch" disabled="disabled" />
-
-                <input type="radio" class="hp-radio" name="myZradio" value="1" />
-                <input type="radio" class="hp-radio" name="myZradio" value="2" />
-                <input type="radio" class="hp-radio" name="myZradio" value="3" disabled="disabled" />
-
-                <div class="hp-radio-buttonbar">
-                    <input type="radio" id="myZradio-buttonbar1" name="myZradio-buttonbar" value="1" />
-                    <label class="hp-radio-buttonbar-button" for="myZradio-buttonbar1">Button 1</label>
-                    <input type="radio" id="myZradio-buttonbar2" name="myZradio-buttonbar" value="2" />
-                    <label class="hp-radio-buttonbar-button" for="myZradio-buttonbar2">Button 2</label>
-                    <input type="radio" id="myZradio-buttonbar2" name="myZradio-buttonbar" value="3" disabled="disabled" />
-                    <label class="hp-radio-buttonbar-button" for="myZradio-buttonbar3">Disabled</label>
-                </div>
-
-                <select class="hp-select">
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                </select>
-
-                <select class="hp-select" disabled="disabled">
-                    <option>Disabled dropdown</option>
-                </select>
-            </div>
-            
-            <div class="example">    
-                <input type="text" class="hp-input-text" />
-                <input type="text" class="hp-input-text" value="Disabled" disabled="disabled"/>
-            </div>
-            
-            <div class="example">    
-                <textarea class="hp-textarea"></textarea>
-                <textarea class="hp-textarea" disabled="disabled">Disabled</textarea>
-            </div>
-
-            <div class="example">
-                <div class="hp-input-group">
-                    <span class="hp-input-group-static">$</span>
-                    <input type="text" class="hp-input-text" />
-                    <span class="hp-input-group-static">.00</span>
-                </div>
-            </div>
-            <div class="example">    
-                <div class="hp-input-group">
-                    <input type="text" class="hp-input-text" />
-                    <input type="submit" value="Search" class="hp-button" />
-                </div>
-            </div>
-
-            <div class="example">    
-                <blockquote class="hp-blockquote">
-                    I am a blockquote, used for quotes that are longer pieces of text.
-                </blockquote>
-
-                <ul class="hp-ul">
-                    <li>Unordered List 1</li>
-                    <li>Unordered List 2</li>
-                    <li>Unordered List 3</li>
-                </ul>
-                <ol class="hp-ol">
-                    <li>Ordered List 1</li>
-                    <li>Ordered List 2</li>
-                    <li>Ordered List 3</li>
-                </ol>
-
-                <ul class="hp-ul hp-ul-unstyled">
-                    <li>Unordered List 1</li>
-                    <li>Unordered List 2</li>
-                    <li>Unordered List 3</li>
-                </ul>
-            </div>
-            
-            <div class="example">    
-                <progress class="hp-progress" value="70" max="100"></progress>
-            </div>
-            
-            <div class="example">    
-                <ul class="hp-progress-list">
-                    <li class="hp-progress-list-complete">First step</li>
-                    <li class="hp-progress-list-current">Second step</li>
-                    <li>Third step</li>
-                </ul>
-            </div>
-
-            <div class="example">
-                <div class="hp-alert">I am a default alert.</div>
-            </div>
-            <div class="example">
-                <div class="hp-alert hp-alert-error">I am an error alert.</div>
-            </div>
-            <div class="example">
-                <div class="hp-alert hp-alert-warning">I am a warning alert.</div>
-            </div>
-            <div class="example">
-                <div class="hp-alert hp-alert-success">I am a success alert.</div>
-            </div>
-            <div class="example">
-                <div class="hp-alert hp-alert-info">I am an info alert.</div>
-            </div>
-
-            <div class="example">
-                <input type="checkbox" checked="checked" id="myZDismissibleAlert" class="hp-alert-dismiss-checkbox" />
-                <div class="hp-alert hp-alert-info">
-                    I am an info alert that is dismissible.
-                    <label for="myZDismissibleAlert" class="hp-alert-dismiss" />
-                </div>
-            </div>
-
-            <div class="example">    
-                <ul class="hp-breadcrumbs">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li>Not a Link 3</li>
-                </ul>
-                
-                <div class="hp-spinner"></div>
-
-                <p>
-                    A paragraph of text with a <span class="hp-badge">badge</span> in it.
-                </p>
-            </div>
-            
-            <div class="example example-inline">
-                <button class="hp-button">Button with indicator number badge <span class="hp-badge hp-badge-light">N</span></button>    
-            </div>
-            
-            <div class="example example-inline">
-                <span class="hp-badge">default</span>
-                <span class="hp-badge hp-badge-secondary">secondary</span>
-                <span class="hp-badge hp-badge-danger">danger</span>
-                <span class="hp-badge hp-badge-light">light</span>
-
-                <div class="hp-tooltip">
-                    <p>Hover over me to see a tooltip.</p>
-                    <aside class="hp-tooltip-content">I am the tooltip content!</aside>
-                </div>
-            </div>
-            
-            <div class="example">    
-                <div class="hp-collapsible">
-                    <input type="checkbox" id="myZcollapsible" />
-                    <label class="hp-collapsible-header" for="myZcollapsible">Click me to expand/collapse</label>
-                    <div class="hp-collapsible-body">
-                        <div class="hp-collapsible-content">
-                            I am the collapsible's content.<br />
-                            I am the collapsible's content.<br />
-                            I am the collapsible's content.<br />
-                            I am the collapsible's content.<br />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="example">    
-                <div class="hp-tabs">
-                  <input type="radio" name="myZtabs" value="1" id="tabZ1" checked="checked">
-                  <label for="tabZ1">Tab 1</label>
-                  <div class="hp-tabs-content">
-                     Tab 1 content
-                  </div>
-                  
-                  <input type="radio" name="myZtabs" value="2" id="tabZ2">
-                  <label for="tabZ2">Tab 2</label>
-                  <div class="hp-tabs-content">
-                     Tab 2 content
-                  </div>
-                  
-                  <input type="radio" name="myZtabs" value="3" id="tabZ3" disabled="disabled">
-                  <label for="tabZ4">Disabled Tab</label>
-                  <div class="hp-tabs-content">
-                     Tab 3 content
-                  </div>
-                </div>
-            </div>
-            
-            <div class="example">    
-                <div class="hp-tabs hp-tabs-simple">
-                  <input type="radio" name="myZtabssimple" value="1" id="tab-Zs1" checked="checked">
-                  <label for="tab-Zs1">Tab 1</label>
-                  <div class="hp-tabs-content">
-                     Tab 1 content using "simple" variant
-                  </div>
-                  
-                  <input type="radio" name="myZtabssimple" value="2" id="tab-Zs2">
-                  <label for="tab-Zs2">Tab 2</label>
-                  <div class="hp-tabs-content">
-                     Tab 2 content using "simple" variant
-                  </div>
-                  
-                  <input type="radio" name="myZtabssimple" value="3" id="tab-Zs3" disabled="disabled">
-                  <label for="tab-Zs4">Disabled Tab</label>
-                  <div class="hp-tabs-content">
-                     Tab 3 content using "simple" variant
-                  </div>
-                </div>
-            </div>
-            
-        </div>
     </div>
-    
 </section>
 
 <a name="accessibility"></a>
@@ -1280,15 +1118,26 @@
 
     <div class="items intro">
         <p>
-            Haupia is a CSS-only library &mdash; but often, adding necessary accessibility support
-            simply requires JavaScript, so using Haupia alone may not meet 
+            Haupia's listed APIs include as much accessibility support as HTML and CSS alone
+            can provide. But Haupia is a CSS-only library, and full accessibility support
+            for your page may sometimes require JavaScript. Please follow the
             <a href="https://www.w3.org/TR/WCAG21/">WCAG guidelines</a>.
-            The listed APIs include some accessibility support, where HTML and CSS alone
-            could provide it.
         </p>
+        <p>
+            Haupia provides a visible <code>focus-visible</code> indicator for its components.
+            If you want this style to apply to <em>all</em> focusable elements on your page, 
+            so that your page is visually consistent, add this CSS:
+        </p>
+
+        <pre class="haupia-code-block">
+            <code>
+*:[focus] {outline: var(--haupia-focus-outline);}
+
+*:[focus-visible] {outline: var(--haupia-focus-visible-outline);}</code>
+        </pre>
+        
     </div>
 </section>
-
 </main>
 
 <footer>

@@ -1,7 +1,7 @@
 :root
 {
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     color: #333;
 }
 
@@ -150,19 +150,15 @@ main
 {
     font-size: 1rem;
 }
-.description code,
-.intro code
+.description code /*,
+.intro code*/
 {
     white-space: nowrap;
 }
 
 .explanation
 {
-    font-size: .8em;
-}
-
-.download
-{
+    font-size: .9em;
 }
 
 .description
@@ -201,11 +197,11 @@ main
     padding: 0 .5rem .8rem 1rem;
     margin: 0 0 0 .5rem;
     color: #333;
-    font-size: .8rem;
+    font-size: .9rem;
     line-height: 1.2rem;
     word-wrap: break-word;
     white-space: pre-wrap;
-    background: #eee;   
+    background: #f6f0f0;   
     border-left: 5px solid #dcc6c6;
     overflow: auto;
 }
