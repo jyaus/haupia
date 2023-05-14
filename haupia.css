@@ -314,7 +314,7 @@
 .haupia-radio-buttonbar {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
     padding: 0;
     margin: 0;
     border: none;

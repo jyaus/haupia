@@ -208,40 +208,37 @@ main
 
 @media (max-width: 768px)
 { 
-    main
-       {
+    main {
       padding: 1rem 10vw;
     }
     
-    .header-block.haupia-title
-       {
+    .header-block.haupia-title {
        margin: -.5rem 1rem 1rem 1rem;
     }
     
-    .download
-       {
+    .download {
        text-align: center;
        padding: 0 20%;
     }
     
-    .download .hp-button
-       {
+    .download .haupia-button {
        margin-bottom: .5rem;
     }
 
-    .category
-       { 
+    .category { 
         display: block;
     }
     
-    .item
-       {
+    .item {
         margin-bottom: 3rem;
     }
     
-    .item:first-of-type .component-name
-       {
+    .item:first-of-type .component-name {
         margin-top: 1rem;
+    }
+
+    .examples {
+        padding: 1.5rem;
     }
 }
 
