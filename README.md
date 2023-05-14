@@ -25,6 +25,8 @@ Dismissible Alerts require the `:has` feature, which [some browsers](https://can
 
 Version History
 -----
+* Version 3.0.1 (2023 May 13): 
+ - fixed Accordion marker on Safari
 * Version 3.0 (2023 May 13): 
  - breaking API change: "haupia" instead of "hp" in class and variable names
  - breaking API change: Collapsible replaced with Accordion

@@ -748,6 +748,8 @@ input:checked:disabled + .haupia-radio-buttonbar-button {
     background: transparent;
     cursor: pointer;
 }
+.haupia-summary {list-style: none}
+.haupia-summary::-webkit-details-marker {display: none; }
 .haupia-summary:before {
     content: " ";
     position: absolute;
