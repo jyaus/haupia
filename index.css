@@ -32,6 +32,10 @@ header
     text-align: center;
 }
 
+.download .haupia-button {
+    margin-bottom: .5rem;
+ }
+
 .header-block,
 .footer-block
 {
@@ -221,10 +225,6 @@ main
        padding: 0 20%;
     }
     
-    .download .haupia-button {
-       margin-bottom: .5rem;
-    }
-
     .category { 
         display: block;
     }

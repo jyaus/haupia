@@ -25,6 +25,8 @@ Dismissible Alerts require the `:has` feature, which [some browsers](https://can
 
 Version History
 -----
+* Version 3.0.2 (2023 May 20): 
+ - fixed Breadcrumb icons
 * Version 3.0.1 (2023 May 14): 
  - fixed Accordion marker on Safari
  - Radio Buttonbars don't line-wrap

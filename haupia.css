@@ -632,8 +632,8 @@ input:checked:disabled + .haupia-radio-buttonbar-button {
     margin: 0 .5em;
     font-size: .8em;
     background-image: 
-      linear-gradient(235deg, transparent 25%, var(--haupia-font-color) 25%, var(--haupia-font-color) 40%, transparent 40%),
-      linear-gradient(305deg, transparent 25%, var(--haupia-font-color) 25%, var(--haupia-font-color) 40%, transparent 40%);
+      linear-gradient(225deg, transparent 25%, var(--haupia-font-color) 25%, var(--haupia-font-color) 40%, transparent 40%),
+      linear-gradient(315deg, transparent 25%, var(--haupia-font-color) 25%, var(--haupia-font-color) 40%, transparent 40%);
 }
 .haupia-breadcrumbs li:last-of-type::after {
     display: none;
