@@ -502,22 +502,23 @@
 
         <h3 class="component-name">Breadcrumbs</h3>
         <div class="examples">
-            <nav class="haupia-breadcrumbs">
+            <nav class="haupia-breadcrumbs" aria-label="breadcrumbs">
                 <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#breadcrumbs">Link 1</a></li>
+                    <li><a href="#breadcrumbs">Link 2</a></li>
                     <li>Not a Link 3</li>
                 </ul>
             </nav>
         </div>
 
-
         <code class="component-code">
-        &lt;ul class="haupia-breadcrumbs" role="navigation"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;Not a Link 3&lt;/li&gt;
-        &lt;/ul&gt;
+        &lt;nav class="haupia-breadcrumbs" aria-label="breadcrumbs"&gt;    
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="somepage"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="someotherpage"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;Not a Link 3&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
         </code>
 
 
@@ -709,11 +710,71 @@
                     </div>
                 </details>
             </div>
+            
+            <code class="component-code">
+                &lt;div class="haupia-accordion"&gt;
+                    &lt;details class="haupia-details"&gt;
+                        &lt;summary class="haupia-summary"&gt;
+                            Click me to expand/collapse
+                        &lt;/summary&gt;
+                        &lt;div class="haupia-details-content"&gt;
+                            I am the accordion content.
+                        &lt;/div&gt;
+                    &lt;/details&gt;
+                &lt;/div&gt;
+            </code>
+        </div>
+
+        <h4 class="component-variant">Exclusive accordions</h4>
+        <p class="description">
+            To make it so that only one of the accordion sections can be open at a time,
+            give each <code>details</code> element a <code>name</code> property
+            with the same value.
+        </p>
+
+        <div class="examples">
+            <div class="haupia-accordion">
+                <details class="haupia-details" name="myaccordion">
+                    <summary class="haupia-summary">Click me to expand/collapse</summary>
+                    <div class="haupia-details-content">
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                    </div>
+                </details>
+                <details class="haupia-details" name="myaccordion">
+                    <summary class="haupia-summary">Click me to expand/collapse</summary>
+                    <div class="haupia-details-content">
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                    </div>
+                </details>
+                <details class="haupia-details" name="myaccordion">
+                    <summary class="haupia-summary">Click me to expand/collapse</summary>
+                    <div class="haupia-details-content" >
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                        I am the accordion content.<br />
+                    </div>
+                </details>
+            </div>
         </div>
 
         <code class="component-code">
             &lt;div class="haupia-accordion"&gt;
-                &lt;details class="haupia-details"&gt;
+                &lt;details class="haupia-details" name="myaccordion"&gt;
+                    &lt;summary class="haupia-summary"&gt;
+                        Click me to expand/collapse
+                    &lt;/summary&gt;
+                    &lt;div class="haupia-details-content"&gt;
+                        I am the accordion content.
+                    &lt;/div&gt;
+                &lt;/details&gt;
+                 &lt;details class="haupia-details" name="myaccordion"&gt;
                     &lt;summary class="haupia-summary"&gt;
                         Click me to expand/collapse
                     &lt;/summary&gt;
@@ -1095,16 +1156,11 @@
 
         <p>
             What makes Haupia's code so simple is its extensive use of 
-            CSS custom properties (aka CSS variables) and CSS filters, so 
-            it works in any browser that supports these features
-            (which is <a href="https://caniuse.com/#feat=css-variables">basically all modern browsers</a>).
-        </p>
-        <p>
-            The close buttons inside dismissible Alerts use the <code>:has</code> feature of CSS, which as of 
-            May 2023 is <a href="https://caniuse.com/css-has">not supported</a> by Firefox and some older versions of Safari.
-            If those browsers are on your supported browser list, you should
-            avoid using dismissible Alerts, since clicking on the close button will not 
-            close the component.
+            CSS <a href="https://caniuse.com/#feat=css-variables">custom properties</a>
+            (aka CSS variables) and 
+            the <a href="https://caniuse.com/css-has"><code>:has</code> selector</a>, so 
+            it works in any browser that supports these features 
+            (which is basically all modern browsers).
         </p>
             
     </div>
@@ -1134,7 +1190,10 @@
             <code>
 *:focus {outline: var(--haupia-focus-outline);}
 
-*:focus-visible p {outline: var(--haupia-focus-visible-outline);}</code>
+*:focus-visible p {
+  outline: var(--haupia-focus-visible-outline); 
+  outline-offset: var(--haupia-focus-visible-outline-offset)
+}</code>
         </pre>
         
     </div>

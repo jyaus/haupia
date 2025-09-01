@@ -6,155 +6,157 @@
 */
 
 :root {
-    --haupia-font-family: inherit; /* not used for headings and text; assumes you want your site's own typography for those */
-    --haupia-font-color: #333;
-    
-    --haupia-font-size: 1rem;
-    --haupia-size-large-factor: 1.4;
-    --haupia-size-small-factor: .9;
-   
-    --haupia-border-color: #777;
-    --haupia-border-radius: 4px;
-   
-    --haupia-highlight-color: #2077d0; /* default color for checkboxes, radios, progress */
-   
-    --haupia-hover-filter: saturate(130%) brightness(105%);
-    --haupia-active-filter: saturate(145%) brightness(100%);
-    --haupia-selected-filter: saturate(80%);
-    --haupia-disabled-filter: saturate(75%) contrast(30%) brightness(150%);
-        
-    --haupia-control-transition-time: .3s; 
+  --haupia-font-family: inherit; /* not used for headings and text; assumes you want your site's own typography for those */
+  --haupia-font-color: #333;
 
-    --haupia-focus-outline: none;
-    --haupia-focus-visible-outline: 2px solid rgb(30 120 200 / 0.7);
-  
-    /* typography */
-    --haupia-font-size-h1: calc(var(--haupia-font-size) * 2.5); 
-    --haupia-font-size-h2: calc(var(--haupia-font-size) * 2);
-    --haupia-font-size-h3: calc(var(--haupia-font-size) * 1.75);
-    --haupia-font-size-h4: calc(var(--haupia-font-size) * 1.5);
-    --haupia-font-size-h5: calc(var(--haupia-font-size) * 1.25);
-    --haupia-font-size-h6: calc(var(--haupia-font-size) * 1);
+  --haupia-font-size: 1rem;
+  --haupia-size-large-factor: 1.4;
+  --haupia-size-small-factor: 0.9;
 
-    --haupia-heading-margin: 1em 0 .5em 0;
-    --haupia-heading-line-height: 1.5em;
-    --haupia-heading-font-weight: 700;
+  --haupia-border-color: #777;
+  --haupia-border-radius: 4px;
 
-    /* buttons, and controls that look like buttons */
-    --haupia-button-line-height: 1.3em;
-    
-    --haupia-button-border-width: 1px;
-    --haupia-button-border-color: transparent;
-    --haupia-button-box-shadow: none;
-    
-    --haupia-button-vertical-padding: .35em;
-    --haupia-button-horizontal-padding: .95em;
-        
-    --haupia-button-background-color: #2077d0;
-    --haupia-button-font-color: white;
-    --haupia-button-font-weight: normal;
-    
-    --haupia-button-background-color-secondary: #ddd;
-    --haupia-button-font-color-secondary: var(--haupia-font-color);
-    
-    --haupia-button-background-color-clear: transparent;
-    --haupia-button-font-color-clear: var(--haupia-font-color);
-    
-    --haupia-button-background-color-danger: #d63d3d;
-    --haupia-button-font-color-danger: white;
-    
-    --haupia-button-background-color-light: #f6f6f6;
-    --haupia-button-font-color-light: var(--haupia-font-color);
-    
-    /* form inputs */
-    --haupia-input-background-color: #fff;
-    --haupia-input-background-color-disabled: #eee;
-    
-    --haupia-checkbox-size: 2em;
-    --haupia-checkbox-border-width: 2px;
-    --haupia-checkbox-highlight-color: var(--haupia-highlight-color);
-    
-    --haupia-text-input-border-width: 1px;
-    --haupia-text-input-focus-color: var(--haupia-highlight-color);
-    --haupia-input-group-text-background-color: #eee;
-    
-    /* alerts */
-    --haupia-alert-background-color: #e6e6e6;
-    --haupia-alert-font-color: var(--haupia-font-color);
-    --haupia-alert-icon-color: white;
+  --haupia-highlight-color: #2077d0; /* default color for checkboxes, radios, progress */
 
-    --haupia-alert-background-color-error: #fcc;
-    --haupia-alert-font-color-error: var(--haupia-alert-font-color);
-    --haupia-alert-icon-background-color-error: #933;
-    
-    --haupia-alert-background-color-warning: #ffc;
-    --haupia-alert-font-color-warning: var(--haupia-alert-font-color);
-    --haupia-alert-icon-background-color-warning: #993;
+  --haupia-hover-filter: saturate(130%) brightness(105%);
+  --haupia-active-filter: saturate(145%) brightness(100%);
+  --haupia-selected-filter: saturate(80%);
+  --haupia-disabled-filter: saturate(75%) contrast(30%) brightness(150%);
 
-    --haupia-alert-background-color-info: #ccf;
-    --haupia-alert-font-color-info: var(--haupia-alert-font-color);
-    --haupia-alert-icon-background-color-info: #339;
+  --haupia-control-transition-time: 0.3s;
 
-    --haupia-alert-background-color-success: #cfc;
-    --haupia-alert-font-color-success: var(--haupia-alert-font-color);
-    --haupia-alert-icon-background-color-success: #393;
-    
-    /* other components */    
-    --haupia-container-border-color: #ccc;
-    
-    --haupia-progress-border-width: 1px;
-    --haupia-progress-fill-color: var(--haupia-highlight-color);
-    
-    --haupia-progress-list-border-width: 2px; 
-    --haupia-progress-list-fill-color: var(--haupia-highlight-color);
-    --haupia-progress-list-background-color: white;
+  --haupia-focus-outline: none;
+  --haupia-focus-visible-outline: 2px solid rgb(30 120 200 / 0.7);
+  --haupia-focus-visible-outline-offset: 2px;
 
-    --haupia-tabs-border-color: var(--haupia-container-border-color);
-    --haupia-tabs-background-color: #fff;
-    --haupia-tabs-background-color-unselected: #eee;
-    --haupia-tabs-font-color: var(--haupia-font-color);
-    --haupia-tabs-border-width: 1px;
-    --haupia-tabs-content-padding: .5em;
-    
-    --haupia-spinner-size: 50px;
-    --haupia-spinner-background: transparent; 
-    --haupia-spinner-border-width: 5px;
-    --haupia-spinner-border-color: #bbb;
-    
-    --haupia-tooltip-background-color: #f3f3f3;
-    --haupia-tooltip-z-index: 9999;
-    --haupia-tooltip-shadow: 2px 2px 2px rgba(100, 100, 100, .2);
-    
-    --haupia-list-vertical-gutter: .2em;
-    --haupia-ul-bullet: "\2022";
-    
-    --haupia-blockquote-font-size: calc(var(--haupia-font-size) * 1.25);
-    --haupia-blockquote-border-left: 5px solid #c9c9c9;
-    
-    --haupia-code-block-background-color: #333;
-    --haupia-code-block-font-color: #efe;
+  /* typography */
+  --haupia-font-size-h1: calc(var(--haupia-font-size) * 2.5);
+  --haupia-font-size-h2: calc(var(--haupia-font-size) * 2);
+  --haupia-font-size-h3: calc(var(--haupia-font-size) * 1.75);
+  --haupia-font-size-h4: calc(var(--haupia-font-size) * 1.5);
+  --haupia-font-size-h5: calc(var(--haupia-font-size) * 1.25);
+  --haupia-font-size-h6: calc(var(--haupia-font-size) * 1);
+
+  --haupia-heading-margin: 1em 0 0.5em 0;
+  --haupia-heading-line-height: 1.5em;
+  --haupia-heading-font-weight: 700;
+
+  /* buttons, and controls that look like buttons */
+  --haupia-button-line-height: 1.3em;
+
+  --haupia-button-border-width: 1px;
+  --haupia-button-border-color: transparent;
+  --haupia-button-box-shadow: none;
+
+  --haupia-button-vertical-padding: 0.35em;
+  --haupia-button-horizontal-padding: 0.95em;
+
+  --haupia-button-background-color: #2077d0;
+  --haupia-button-font-color: white;
+  --haupia-button-font-weight: normal;
+
+  --haupia-button-background-color-secondary: #ddd;
+  --haupia-button-font-color-secondary: var(--haupia-font-color);
+
+  --haupia-button-background-color-clear: transparent;
+  --haupia-button-font-color-clear: var(--haupia-font-color);
+
+  --haupia-button-background-color-danger: #d63d3d;
+  --haupia-button-font-color-danger: white;
+
+  --haupia-button-background-color-light: #f6f6f6;
+  --haupia-button-font-color-light: var(--haupia-font-color);
+
+  /* form inputs */
+  --haupia-input-background-color: #fff;
+  --haupia-input-background-color-disabled: #eee;
+
+  --haupia-checkbox-size: max(24px, round(2em, 1px));
+  --haupia-checkbox-border-width: 2px;
+  --haupia-checkbox-highlight-color: var(--haupia-highlight-color);
+
+  --haupia-text-input-border-width: 1px;
+  --haupia-text-input-focus-color: var(--haupia-highlight-color);
+  --haupia-input-group-text-background-color: #eee;
+
+  /* alerts */
+  --haupia-alert-background-color: #e6e6e6;
+  --haupia-alert-font-color: var(--haupia-font-color);
+  --haupia-alert-icon-color: white;
+
+  --haupia-alert-background-color-error: #fcc;
+  --haupia-alert-font-color-error: var(--haupia-alert-font-color);
+  --haupia-alert-icon-background-color-error: #933;
+
+  --haupia-alert-background-color-warning: #ffc;
+  --haupia-alert-font-color-warning: var(--haupia-alert-font-color);
+  --haupia-alert-icon-background-color-warning: #993;
+
+  --haupia-alert-background-color-info: #ccf;
+  --haupia-alert-font-color-info: var(--haupia-alert-font-color);
+  --haupia-alert-icon-background-color-info: #339;
+
+  --haupia-alert-background-color-success: #cfc;
+  --haupia-alert-font-color-success: var(--haupia-alert-font-color);
+  --haupia-alert-icon-background-color-success: #393;
+
+  --haupia-container-border-color: #ccc;
+
+  --haupia-progress-border-width: 1px;
+  --haupia-progress-fill-color: var(--haupia-highlight-color);
+
+  --haupia-progress-list-border-width: 2px;
+  --haupia-progress-list-fill-color: var(--haupia-highlight-color);
+  --haupia-progress-list-background-color: white;
+
+  --haupia-tabs-border-color: var(--haupia-container-border-color);
+  --haupia-tabs-background-color: #fff;
+  --haupia-tabs-background-color-unselected: #eee;
+  --haupia-tabs-font-color: var(--haupia-font-color);
+  --haupia-tabs-border-width: 1px;
+  --haupia-tabs-content-padding: 0.5em;
+
+  --haupia-spinner-size: 50px;
+  --haupia-spinner-background: transparent;
+  --haupia-spinner-border-width: 5px;
+  --haupia-spinner-border-color: #909090;
+  --haupia-spinner-background-color: #eeeeee;
+
+  --haupia-tooltip-background-color: #f3f3f3;
+  --haupia-tooltip-z-index: 9999;
+  --haupia-tooltip-shadow: 2px 2px 2px rgba(100, 100, 100, 0.2);
+
+  --haupia-list-vertical-gutter: 0.2em;
+  --haupia-ul-bullet: "\2022";
+
+  --haupia-blockquote-font-size: calc(var(--haupia-font-size) * 1.25);
+  --haupia-blockquote-border-left: 5px solid #c9c9c9;
+
+  --haupia-code-block-background-color: #333;
+  --haupia-code-block-font-color: #efe;
 }
 
 [class*="haupia-"] {
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 [class*="haupia-"]:focus {
-    outline: var(--haupia-focus-outline);
+  outline: var(--haupia-focus-outline);
 }
 [class*="haupia-"]:focus-visible {
-    outline: var(--haupia-focus-visible-outline);
+  outline: var(--haupia-focus-visible-outline);
+  outline-offset: var(--haupia-focus-visible-outline-offset);
 }
 
 .haupia-visually-hidden:not(:focus):not(:active),
 .haupia-close-button-checkbox {
-    clip: rect(0 0 0 0); 
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap; 
-    width: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* 
@@ -170,257 +172,316 @@
 .haupia-radio,
 .haupia-switch,
 .haupia-progress {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-
 
 .haupia-button,
 .haupia-select,
 .haupia-input-text,
 .haupia-textarea,
 .haupia-radio-buttonbar-button {
-    box-sizing: border-box;
-    padding: var(--haupia-button-vertical-padding) var(--haupia-button-horizontal-padding);
-    font-family: var(--haupia-font-family);
-    font-size: var(--haupia-font-size);
-    font-weight: var(--haupia-font-weight);
-    line-height: var(--haupia-button-line-height);
-    color: var(--haupia-button-font-color);
-    text-decoration: none;
-    background-color: var(--haupia-button-background-color);
-    border: var(--haupia-button-border-width) solid var(--haupia-button-border-color);
-    border-radius: var(--haupia-border-radius);   
-    vertical-align: middle;
-    box-shadow: var(--haupia-button-box-shadow);
-    cursor: pointer;     
+  box-sizing: border-box;
+  padding: var(--haupia-button-vertical-padding)
+    var(--haupia-button-horizontal-padding);
+  font-family: var(--haupia-font-family);
+  font-size: var(--haupia-font-size);
+  font-weight: var(--haupia-font-weight);
+  line-height: var(--haupia-button-line-height);
+  color: var(--haupia-button-font-color);
+  text-decoration: none;
+  background-color: var(--haupia-button-background-color);
+  border: var(--haupia-button-border-width) solid
+    var(--haupia-button-border-color);
+  border-radius: var(--haupia-border-radius);
+  vertical-align: middle;
+  box-shadow: var(--haupia-button-box-shadow);
+  cursor: pointer;
 }
 
 .haupia-button:hover,
 .haupia-select:hover,
 .haupia-radio-buttonbar-button:hover,
 .haupia-summary.haupia-alert {
-    filter: var(--haupia-hover-filter);
+  filter: var(--haupia-hover-filter);
 }
 
 .haupia-button:active,
 .haupia-select:active,
 .haupia-radio-buttonbar-button:active,
 .haupia-summary:active {
-    filter: var(--haupia-active-filter);
+  filter: var(--haupia-active-filter);
 }
 
 .haupia-button {
-    position: relative;
-    display: inline-block;
-    user-select: none;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
 }
 
 .haupia-button-large {
-    padding-top: calc(--haupia-button-vertical-padding * (1em / var(--haupia-size-large-factor) ) );
-    padding-bottom: calc(--haupia-button-vertical-padding * (1em / var(--haupia-size-large-factor) ) );
-    font-size: calc(var(--haupia-font-size) * var(--haupia-size-large-factor));
-    line-height: calc(var(--haupia-button-line-height) * var(--haupia-size-large-factor));
+  padding-top: calc(
+    --haupia-button-vertical-padding * (1em / var(--haupia-size-large-factor))
+  );
+  padding-bottom: calc(
+    --haupia-button-vertical-padding * (1em / var(--haupia-size-large-factor))
+  );
+  font-size: calc(var(--haupia-font-size) * var(--haupia-size-large-factor));
+  line-height: calc(
+    var(--haupia-button-line-height) * var(--haupia-size-large-factor)
+  );
 }
 .haupia-button-small {
-    font-size: calc(var(--haupia-font-size) * var(--haupia-size-small-factor));
-    line-height: calc(var(--haupia-button-line-height) * var(--haupia-size-small-factor));
+  font-size: calc(var(--haupia-font-size) * var(--haupia-size-small-factor));
+  line-height: calc(
+    var(--haupia-button-line-height) * var(--haupia-size-small-factor)
+  );
 }
 
 .haupia-button.haupia-button-secondary {
-    color: var(--haupia-button-font-color-secondary);
-    background-color: var(--haupia-button-background-color-secondary);
+  color: var(--haupia-button-font-color-secondary);
+  background-color: var(--haupia-button-background-color-secondary);
 }
 .haupia-button.haupia-button-clear {
-    color: var(--haupia-button-font-color-clear);
-    background-color: var(--haupia-button-background-color-clear);
+  color: var(--haupia-button-font-color-clear);
+  background-color: var(--haupia-button-background-color-clear);
 }
 .haupia-button.haupia-button-danger {
-    color: var(--haupia-button-font-color-danger);
-    background-color: var(--haupia-button-background-color-danger);
+  color: var(--haupia-button-font-color-danger);
+  background-color: var(--haupia-button-background-color-danger);
 }
 .haupia-button.haupia-button-light {
-    color: var(--haupia-button-font-color-light);
-    background-color: var(--haupia-button-background-color-light);
+  color: var(--haupia-button-font-color-light);
+  background-color: var(--haupia-button-background-color-light);
 }
 .haupia-button.haupia-button-text {
-    color: var(--haupia-button-background-color);
-    background-color: transparent;
-    border-color: transparent;
+  color: var(--haupia-button-background-color);
+  background-color: transparent;
+  border-color: transparent;
 }
 .haupia-button.haupia-button-outlined {
-    color: var(--haupia-button-background-color);
-    background-color: transparent;
-    border-color: var(--haupia-button-background-color);
+  color: var(--haupia-button-background-color);
+  background-color: transparent;
+  border-color: var(--haupia-button-background-color);
 }
 
 .haupia-select {
-    padding-right: 2em;
-    background-image: 
-        linear-gradient(to bottom, var(--haupia-button-background-color) .70em, transparent .70em),
-        linear-gradient(-65deg, var(--haupia-button-background-color) 1.45em, transparent 1.45em),
-        linear-gradient(-115deg, var(--haupia-button-font-color) 1.7em, transparent 1.7em);
-
+  padding-right: 2em;
+  background-image: linear-gradient(
+      to bottom,
+      var(--haupia-button-background-color) 0.75em,
+      transparent 0.75em
+    ),
+    linear-gradient(
+      -65deg,
+      var(--haupia-button-background-color) 1.45em,
+      transparent 1.45em
+    ),
+    linear-gradient(
+      -115deg,
+      var(--haupia-button-font-color) 1.75em,
+      transparent 1.75em
+    );
 }
 .haupia-select option {
-    font-family: var(--haupia-font-family);
-    font-size: var(--haupia-font-size);
-    color: var(--haupia-button-font-color-secondary);
-    background-color: var(--haupia-button-background-color-secondary);
+  font-family: var(--haupia-font-family);
+  font-size: var(--haupia-font-size);
+  color: var(--haupia-button-font-color-secondary);
+  background-color: var(--haupia-button-background-color-secondary);
 }
 
 .haupia-checkbox,
 .haupia-radio,
 .haupia-switch {
-    box-sizing: border-box;
-    height: var(--haupia-checkbox-size);
-    width: var(--haupia-checkbox-size);
-    margin-top: 0;
-    margin-bottom: 0;
-    background: var(--haupia-input-background-color);
-    border: var(--haupia-checkbox-border-width) solid var(--haupia-border-color);
-    border-radius: var(--haupia-border-radius);
-    cursor: pointer;
-    user-select: none;    
+  box-sizing: border-box;
+  height: var(--haupia-checkbox-size);
+  width: var(--haupia-checkbox-size);
+  margin-top: 0;
+  margin-bottom: 0;
+  background: var(--haupia-input-background-color);
+  border: var(--haupia-checkbox-border-width) solid var(--haupia-border-color);
+  border-radius: var(--haupia-border-radius);
+  cursor: pointer;
+  user-select: none;
 }
 
 .haupia-checkbox:checked,
 .haupia-radio:checked {
-    border-color: var(--haupia-checkbox-highlight-color);
+  border-color: var(--haupia-checkbox-highlight-color);
 }
 
 .haupia-checkbox:disabled,
 .haupia-radio:disabled {
-    background: var(--haupia-input-background-color-disabled);
+  background: var(--haupia-input-background-color-disabled);
 }
 
 .haupia-checkbox:checked {
-    border-color: var(--haupia-checkbox-highlight-color);
-    background-image:
-        linear-gradient(150deg, var(--haupia-checkbox-highlight-color), var(--haupia-checkbox-highlight-color) 35%, transparent 36%, transparent 59%, transparent 59%, var(--haupia-checkbox-highlight-color) 60%),        
-        linear-gradient(240deg, var(--haupia-checkbox-highlight-color), var(--haupia-checkbox-highlight-color) 17%, var(--haupia-checkbox-highlight-color) 18%, transparent 19%, transparent 67%, var(--haupia-input-background-color) 68%, var(--haupia-input-background-color) 75%, var(--haupia-checkbox-highlight-color) 76%),
-        linear-gradient(150deg, var(--haupia-checkbox-highlight-color), var(--haupia-checkbox-highlight-color) 50%, var(--haupia-input-background-color) 51%, var(--haupia-input-background-color) 55%, var(--haupia-input-background-color) 59%, var(--haupia-checkbox-highlight-color) 60%)         
+  border-color: var(--haupia-checkbox-highlight-color);
+  background-image: linear-gradient(
+      150deg,
+      var(--haupia-checkbox-highlight-color),
+      var(--haupia-checkbox-highlight-color) 35%,
+      transparent 36%,
+      transparent 59%,
+      transparent 59%,
+      var(--haupia-checkbox-highlight-color) 60%
+    ),
+    linear-gradient(
+      240deg,
+      var(--haupia-checkbox-highlight-color),
+      var(--haupia-checkbox-highlight-color) 17%,
+      var(--haupia-checkbox-highlight-color) 18%,
+      transparent 19%,
+      transparent 67%,
+      var(--haupia-input-background-color) 68%,
+      var(--haupia-input-background-color) 75%,
+      var(--haupia-checkbox-highlight-color) 76%
+    ),
+    linear-gradient(
+      150deg,
+      var(--haupia-checkbox-highlight-color),
+      var(--haupia-checkbox-highlight-color) 50%,
+      var(--haupia-input-background-color) 51%,
+      var(--haupia-input-background-color) 55%,
+      var(--haupia-input-background-color) 59%,
+      var(--haupia-checkbox-highlight-color) 60%
+    );
 }
 
 .haupia-radio {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 .haupia-radio:checked {
-    background-image: radial-gradient(var(--haupia-checkbox-highlight-color) 50%, var(--haupia-input-background-color) 51%, var(--haupia-input-background-color) 100%);
+  background-image: radial-gradient(
+    var(--haupia-checkbox-highlight-color) 49%,
+    var(--haupia-input-background-color) 52%,
+    var(--haupia-input-background-color) 100%
+  );
 }
 
 .haupia-radio-buttonbar {
-    position: relative;
-    display: flex;
-    flex-wrap: no-wrap;
-    padding: 0;
-    margin: 0;
-    border: none;
+  position: relative;
+  display: flex;
+  flex-wrap: no-wrap;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 .haupia-radio-buttonbar input {
-    position: absolute;
-    z-index: -1;
-    left: -1000vw;
-    opacity: 0;
+  position: absolute;
+  z-index: -1;
+  left: -1000vw;
+  opacity: 0;
 }
 .haupia-radio-buttonbar-button {
-    color: var(--haupia-button-font-color-secondary);
-    background-color: var(--haupia-button-background-color-light);
-    border-right-color: var(--haupia-border-color);
-    border-radius: 0;
-    user-select: none;
+  color: var(--haupia-button-font-color-secondary);
+  background-color: var(--haupia-button-background-color-light);
+  border-right-color: var(--haupia-border-color);
+  border-radius: 0;
+  user-select: none;
 }
 .haupia-radio-buttonbar input:focus-visible + .haupia-radio-buttonbar-button {
-    outline: var(--haupia-focus-visible-outline);
+  outline: var(--haupia-focus-visible-outline);
 }
 .haupia-radio-buttonbar input:checked + .haupia-radio-buttonbar-button {
-    color: var(--haupia-button-font-color);
-    background-color: var(--haupia-button-background-color);
-    filter: var(--haupia-selected-filter);
+  color: var(--haupia-button-font-color);
+  background-color: var(--haupia-button-background-color);
+  filter: var(--haupia-selected-filter);
 }
 .haupia-radio-buttonbar-button:first-of-type {
-    border-radius: var(--haupia-border-radius) 0 0 var(--haupia-border-radius);
+  border-radius: var(--haupia-border-radius) 0 0 var(--haupia-border-radius);
 }
 .haupia-radio-buttonbar-button:last-of-type {
-    border-right-color: var(--haupia-button-border-color);
-    border-radius: 0 var(--haupia-border-radius) var(--haupia-border-radius) 0;
+  border-right-color: var(--haupia-button-border-color);
+  border-radius: 0 var(--haupia-border-radius) var(--haupia-border-radius) 0;
 }
 
 .haupia-switch {
-    position: relative;
-    width: calc(var(--haupia-checkbox-size) * 2);
-    border-radius: calc(var(--haupia-checkbox-size) / 2);
-    background-color: var(--haupia-input-background-color); 
-    box-shadow: inset calc((var(--haupia-checkbox-size) - var(--haupia-checkbox-border-width)) * -1) 0 0 0 #bbb; /* "off" background color */ 
-    transition: var(--haupia-control-transition-time);
+  position: relative;
+  width: calc(var(--haupia-checkbox-size) * 2);
+  border-radius: calc(var(--haupia-checkbox-size) / 2);
+  background-color: var(--haupia-input-background-color);
+  box-shadow: inset
+    calc(
+      (var(--haupia-checkbox-size) - var(--haupia-checkbox-border-width)) * -1
+    )
+    0 0 0 #bbb; /* "off" background color */
+  transition: var(--haupia-control-transition-time);
 }
 .haupia-switch:checked {
-    box-shadow: inset calc(var(--haupia-checkbox-size) - var(--haupia-checkbox-border-width)) 0 0 0 var(--haupia-checkbox-highlight-color); /* "on" background color */ 
+  box-shadow: inset
+    calc(var(--haupia-checkbox-size) - var(--haupia-checkbox-border-width)) 0 0
+    0 var(--haupia-checkbox-highlight-color); /* "on" background color */
 }
 
 .haupia-input-group {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    align-content: stretch;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0;
-    background-color: var(--haupia-input-group-text-background-color);
-    border: var(--haupia-text-input-border-width) solid var(--haupia-border-color);
-    border-radius: var(--haupia-border-radius);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  background-color: var(--haupia-input-group-text-background-color);
+  border: var(--haupia-text-input-border-width) solid var(--haupia-border-color);
+  border-radius: var(--haupia-border-radius);
 }
 .haupia-input-group .haupia-input-text {
-    box-sizing: border-box;
-    flex: 1 10 auto;
-    min-width: 2em;
-    width: 100%;
-    border-radius: 0;
-    box-shadow: none;
+  box-sizing: border-box;
+  flex: 1 10 auto;
+  min-width: 2em;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none;
 }
-@supports (--custom-properties: yes) /* make sure older browsers get a visible input field */
-{
-    .haupia-input-group .haupia-input-text {
-        border-top-width: 0;
-        border-bottom-width: 0;
-    }
+@supports (--custom-properties: yes)
+  /* make sure older browsers get a visible input field */ {
+  .haupia-input-group .haupia-input-text {
+    border-top-width: 0;
+    border-bottom-width: 0;
+  }
 }
 .haupia-input-group .haupia-input-text:first-child {
-    border-left-width: 0;
+  border-left-width: 0;
+  border-top-left-radius: var(--haupia-border-radius);
+  border-bottom-left-radius: var(--haupia-border-radius);
 }
 .haupia-input-group .haupia-input-text:last-child {
-    border-right-width: 0;
+  border-right-width: 0;
+  border-top-right-radius: var(--haupia-border-radius);
+  border-bottom-right-radius: var(--haupia-border-radius);
 }
 .haupia-input-group-static {
-    box-sizing: border-box;
-    flex: 0 1 auto;
-    padding: var(--haupia-button-vertical-padding) var(--haupia-button-horizontal-padding);
-    font-family: var(--haupia-font-family);
-    font-size: var(--haupia-font-size);
-    line-height: var(--haupia-button-line-height);
+  box-sizing: border-box;
+  flex: 0 1 auto;
+  padding: var(--haupia-button-vertical-padding)
+    var(--haupia-button-horizontal-padding);
+  font-family: var(--haupia-font-family);
+  font-size: var(--haupia-font-size);
+  line-height: var(--haupia-button-line-height);
 }
 .haupia-input-group .haupia-button {
-    border-radius: 0;  
+  border-radius: 0;
 }
 
 .haupia-input-text,
 .haupia-textarea {
-    color: var(--haupia-font-color);
-    background: var(--haupia-input-background-color);
-    border: var(--haupia-text-input-border-width) solid var(--haupia-border-color);
-    box-shadow: none;
+  color: var(--haupia-font-color);
+  background: var(--haupia-input-background-color);
+  border: var(--haupia-text-input-border-width) solid var(--haupia-border-color);
+  box-shadow: none;
 }
 .haupia-input-text:focus,
 .haupia-textarea:focus {
-    border-color: var(--haupia-text-input-focus-color);
-    box-shadow: inset 0 0 1px 0 var(--haupia-text-input-focus-color);
-    transition: box-shadow var(--haupia-control-transition-time);
+  border-color: var(--haupia-text-input-focus-color);
+  box-shadow: inset 0 0 1px 0 var(--haupia-text-input-focus-color);
+  transition: box-shadow var(--haupia-control-transition-time);
 }
 .haupia-input-text:disabled,
 .haupia-textarea:disabled {
-    background: var(--haupia-input-background-color-disabled);
+  background: var(--haupia-input-background-color-disabled);
 }
 
 .haupia-button:disabled,
@@ -432,492 +493,656 @@
 .haupia-radio:disabled,
 input:disabled + .haupia-radio-buttonbar-button,
 input:checked:disabled + .haupia-radio-buttonbar-button {
-    cursor: not-allowed;
-    filter: var(--haupia-disabled-filter);
+  cursor: not-allowed;
+  filter: var(--haupia-disabled-filter);
 }
-@supports (--custom-properties: yes) /* override the fallback we use for older browsers */
-{
-    .haupia-button:disabled,
-    input:disabled + .haupia-radio-buttonbar-button {
-        opacity: 1; 
-    }
+@supports (--custom-properties: yes)
+  /* override the fallback we use for older browsers */ {
+  .haupia-button:disabled,
+  input:disabled + .haupia-radio-buttonbar-button {
+    opacity: 1;
+  }
 }
 
 .haupia-badge {
-    display: inline-block;
-    margin: 0;
-    padding: .35em .25em .35em .25em;
-    font-family: var(--haupia-font-family);
-    font-size: .85em;
-    line-height: .8em;
-    color: var(--haupia-button-font-color);
-    text-shadow: 0 0 0 rgba(0, 0, 0, .5);
-    background: var(--haupia-button-background-color);
-    border-radius: .5em;
+  display: inline-block;
+  margin: 0;
+  padding: 0.25em 0.25em;
+  font-family: var(--haupia-font-family);
+  font-size: 0.85em;
+  line-height: 0.8em;
+  color: var(--haupia-button-font-color);
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  background: var(--haupia-button-background-color);
+  border-radius: 0.5em;
 }
 .haupia-badge-secondary {
-    color: var(--haupia-button-font-color-secondary);
-    background: var(--haupia-button-background-color-secondary);
+  color: var(--haupia-button-font-color-secondary);
+  background: var(--haupia-button-background-color-secondary);
 }
 .haupia-badge-danger {
-    color: var(--haupia-button-font-color-danger);
-    background: var(--haupia-button-background-color-danger);
+  color: var(--haupia-button-font-color-danger);
+  background: var(--haupia-button-background-color-danger);
 }
 .haupia-badge-light {
-    color: var(--haupia-button-font-color-light);
-    background: var(--haupia-button-background-color-light);
+  color: var(--haupia-button-font-color-light);
+  background: var(--haupia-button-background-color-light);
 }
 
 .haupia-tooltip {
-    box-sizing: border-box;
-    position: relative;
-    z-index: var(--haupia-tooltip-z-index);
-    transition: all var(--haupia-control-transition-time);
-    filter: drop-shadow(var(--haupia-tooltip-shadow));
-    cursor: help;
+  box-sizing: border-box;
+  position: relative;
+  z-index: var(--haupia-tooltip-z-index);
+  transition: all var(--haupia-control-transition-time);
+  filter: drop-shadow(var(--haupia-tooltip-shadow));
+  cursor: help;
 }
 .haupia-tooltip-content {
-    position: absolute;
-    top: calc(100% + .5em);
-    left: .5em;
-    opacity: 0;
-    z-index: -1;
-    padding: .5em;
-    color: var(--haupia-button-font-color-secondary);
-    background-color: var(--haupia-tooltip-background-color);
-    border-radius: var(--haupia-border-radius);
+  position: absolute;
+  top: calc(100% + 0.5em);
+  left: 0.5em;
+  opacity: 0;
+  z-index: -1;
+  padding: 0.5em;
+  color: var(--haupia-button-font-color-secondary);
+  background-color: var(--haupia-tooltip-background-color);
+  border-radius: var(--haupia-border-radius);
 }
-.haupia-tooltip-content::before {   
-    content: " ";
-    position: absolute;
-    top: -.4em;
-    left: 1em;
-    z-index: -1;
-    display: block;
-    width: .9em;
-    height: .9em;    
-    background-image: linear-gradient(135deg, var(--haupia-tooltip-background-color) 50%, transparent 50%);
-    transform: rotate(45deg);
+.haupia-tooltip-content::before {
+  content: " ";
+  position: absolute;
+  top: -0.4em;
+  left: 1em;
+  z-index: -1;
+  display: block;
+  width: 0.9em;
+  height: 0.9em;
+  background-image: linear-gradient(
+    135deg,
+    var(--haupia-tooltip-background-color) 50%,
+    transparent 50%
+  );
+  transform: rotate(45deg);
 }
 .haupia-tooltip:hover .haupia-tooltip-content {
-    opacity: 1;
-    z-index: 3;
+  opacity: 1;
+  z-index: 3;
 }
 
 .haupia-close-button {
-    box-sizing: border-box;
-    display: inline-block;
-    height: .8em;
-    width: .8em;
-    cursor: pointer;
-    border-radius: var(--haupia-border-radius);
-    background-image: linear-gradient(45deg, transparent 45%, var(--haupia-font-color) 45%, var(--haupia-font-color) 55%, transparent 55%),
-    linear-gradient(135deg, transparent 45%, var(--haupia-font-color) 45%, var(--haupia-font-color) 55%, transparent 55%);
-    cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 0.8em;
+  width: 0.8em;
+  cursor: pointer;
+  border-radius: var(--haupia-border-radius);
+  background-image: linear-gradient(
+      45deg,
+      transparent 45%,
+      var(--haupia-font-color) 45%,
+      var(--haupia-font-color) 55%,
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 45%,
+      var(--haupia-font-color) 45%,
+      var(--haupia-font-color) 55%,
+      transparent 55%
+    );
+  cursor: pointer;
 }
 .haupia-close-button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 .haupia-close-button-checkbox:focus-visible + .haupia-close-button {
-    outline: var(--haupia-focus-visible-outline);
+  outline: var(--haupia-focus-visible-outline);
 }
 
 .haupia-alert {
-    position: relative;
-    padding: 1em 2em 1em 2.5em; 
-    color: var(--haupia-alert-font-color);
-    font-family: var(--haupia-font-family);
-    line-height: var(--haupia-button-line-height);
-    background-color: var(--haupia-alert-background-color);
-    border-radius: var(--haupia-border-radius);
+  position: relative;
+  padding: 1em 2em 1em 2.5em;
+  color: var(--haupia-alert-font-color);
+  font-family: var(--haupia-font-family);
+  line-height: var(--haupia-button-line-height);
+  background-color: var(--haupia-alert-background-color);
+  border-radius: var(--haupia-border-radius);
 }
 .haupia-alert::before, /* icon for the alert */
-.haupia-alert::after /* background for the icon */
-{
-    content: " ";
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    line-height: 1.3em;
-    color: var(--haupia-alert-icon-color);
-    text-align: center;
-    font-weight: bold;
-    border-radius: 50%;
-    transform: translateY(-50%);
+.haupia-alert::after /* background for the icon */ {
+  content: " ";
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  line-height: 1.3em;
+  color: var(--haupia-alert-icon-color);
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 .haupia-alert::before {
-    left: .8em;
-    width: .9em;
-    height: .9em;
+  left: 0.8em;
+  width: 0.9em;
+  height: 0.9em;
 }
 .haupia-alert::after {
-    z-index: 1;
-    left: .6em;
-    width: 1.3em;
-    height: 1.3em;
+  z-index: 1;
+  left: 0.6em;
+  width: 1.3em;
+  height: 1.3em;
 }
 .haupia-alert-error {
-    background-color: var(--haupia-alert-background-color-error);
-    color: var(--haupia-alert-font-color-error);
+  background-color: var(--haupia-alert-background-color-error);
+  color: var(--haupia-alert-font-color-error);
 }
 .haupia-alert-error::before {
-    background-image: 
-        linear-gradient(0deg, transparent 20%, var(--haupia-alert-icon-background-color-error) 20%, var(--haupia-alert-icon-background-color-error) 30%, transparent 30%),
-        linear-gradient(90deg, transparent 45%, currentColor 45%, currentColor 55%, transparent 55%);
+  background-image: linear-gradient(
+      0deg,
+      transparent 20%,
+      var(--haupia-alert-icon-background-color-error) 20%,
+      var(--haupia-alert-icon-background-color-error) 30%,
+      transparent 30%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 43%,
+      currentColor 43%,
+      currentColor 58%,
+      transparent 58%
+    );
 }
 .haupia-alert-error::after {
-    background-color: var(--haupia-alert-icon-background-color-error);
+  background-color: var(--haupia-alert-icon-background-color-error);
 }
 .haupia-alert-warning {
-    background-color: var(--haupia-alert-background-color-warning);
-    color: var(--haupia-alert-font-color-warning);
+  background-color: var(--haupia-alert-background-color-warning);
+  color: var(--haupia-alert-font-color-warning);
 }
 .haupia-alert-warning::before {
-    background-image: 
-        linear-gradient(0deg, transparent 20%, var(--haupia-alert-icon-background-color-warning) 20%, var(--haupia-alert-icon-background-color-warning) 30%, transparent 30%),
-        linear-gradient(90deg, transparent 45%, currentColor 45%, currentColor 55%, transparent 55%);
+  background-image: linear-gradient(
+      0deg,
+      transparent 20%,
+      var(--haupia-alert-icon-background-color-warning) 20%,
+      var(--haupia-alert-icon-background-color-warning) 30%,
+      transparent 30%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 43%,
+      currentColor 43%,
+      currentColor 58%,
+      transparent 58%
+    );
 }
 .haupia-alert-warning::after {
-    background-color: var(--haupia-alert-icon-background-color-warning);
+  background-color: var(--haupia-alert-icon-background-color-warning);
 }
 .haupia-alert-success {
-    background-color: var(--haupia-alert-background-color-success);
-    color: var(--haupia-alert-font-color-success);
+  background-color: var(--haupia-alert-background-color-success);
+  color: var(--haupia-alert-font-color-success);
 }
 .haupia-alert-success::before {
-    background-image:
-        linear-gradient(150deg, var(--haupia-alert-icon-background-color-success), var(--haupia-alert-icon-background-color-success) 35%, transparent 36%, transparent 59%, transparent 59%, var(--haupia-alert-icon-background-color-success) 60%),        
-        linear-gradient(240deg, var(--haupia-alert-icon-background-color-success), var(--haupia-alert-icon-background-color-success) 17%, var(--haupia-alert-icon-background-color-success) 18%, transparent 19%, transparent 67%, currentColor 68%, currentColor 75%, var(--haupia-alert-icon-background-color-success) 76%),
-        linear-gradient(150deg, var(--haupia-alert-icon-background-color-success), var(--haupia-alert-icon-background-color-success) 50%, currentColor 51%, currentColor 55%, currentColor 59%, var(--haupia-alert-icon-background-color-success) 60%);
+  background-image: linear-gradient(
+      150deg,
+      var(--haupia-alert-icon-background-color-success),
+      var(--haupia-alert-icon-background-color-success) 35%,
+      transparent 36%,
+      transparent 59%,
+      transparent 59%,
+      var(--haupia-alert-icon-background-color-success) 60%
+    ),
+    linear-gradient(
+      240deg,
+      var(--haupia-alert-icon-background-color-success),
+      var(--haupia-alert-icon-background-color-success) 17%,
+      var(--haupia-alert-icon-background-color-success) 18%,
+      transparent 19%,
+      transparent 67%,
+      currentColor 68%,
+      currentColor 75%,
+      var(--haupia-alert-icon-background-color-success) 76%
+    ),
+    linear-gradient(
+      150deg,
+      var(--haupia-alert-icon-background-color-success),
+      var(--haupia-alert-icon-background-color-success) 50%,
+      currentColor 51%,
+      currentColor 55%,
+      currentColor 59%,
+      var(--haupia-alert-icon-background-color-success) 60%
+    );
 }
 .haupia-alert-success::after {
-    background-color: var(--haupia-alert-icon-background-color-success);
+  background-color: var(--haupia-alert-icon-background-color-success);
 }
 .haupia-alert-info {
-    background-color: var(--haupia-alert-background-color-info);
-    color: var(--haupia-alert-font-color-info);
+  background-color: var(--haupia-alert-background-color-info);
+  color: var(--haupia-alert-font-color-info);
 }
 .haupia-alert-info::before {
-    background-image: linear-gradient(180deg, transparent 20%, var(--haupia-alert-icon-background-color-info) 20%, var(--haupia-alert-icon-background-color-info) 30%, transparent 30%),
-    linear-gradient(90deg, transparent 45%, currentColor 45%, currentColor 55%, transparent 55%);
+  background-image: linear-gradient(
+      180deg,
+      transparent 20%,
+      var(--haupia-alert-icon-background-color-info) 20%,
+      var(--haupia-alert-icon-background-color-info) 30%,
+      transparent 30%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 43%,
+      currentColor 43%,
+      currentColor 58%,
+      transparent 58%
+    );
 }
 .haupia-alert-info::after {
-    background-color: var(--haupia-alert-icon-background-color-info);
-
+  background-color: var(--haupia-alert-icon-background-color-info);
 }
 
 .haupia-alert .haupia-close-button {
-    position: absolute;
-    top: 1.2em;
-    right: .8em;
+  position: absolute;
+  top: 1.2em;
+  right: 0.8em;
 }
 .haupia-alert:has(.haupia-close-button-checkbox:checked) {
-    display: none;
+  display: none;
 }
 
 .haupia-breadcrumbs ul {
-    padding-left: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-content: flex-start;
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
-.haupia-breadcrumbs li {    
-    list-style-type: none;
+.haupia-breadcrumbs li {
+  list-style-type: none;
 }
 .haupia-breadcrumbs li:after {
-    content: " ";
-    display: inline-block;
-    width: .5em;
-    height: .8em;
-    margin: 0 .5em;
-    font-size: .8em;
-    background-image: 
-      linear-gradient(225deg, transparent 25%, var(--haupia-font-color) 25%, var(--haupia-font-color) 40%, transparent 40%),
-      linear-gradient(315deg, transparent 25%, var(--haupia-font-color) 25%, var(--haupia-font-color) 40%, transparent 40%);
+  content: " ";
+  display: inline-block;
+  width: 0em;
+  height: 1em;
+  margin: 0 0.6em -0.05em 0.6em;
+  font-size: 0.8em;
+  vertical-align: baseline;
+  border-right: 1px solid var(--haupia-font-color);
+  rotate: 15deg;
 }
 .haupia-breadcrumbs li:last-of-type::after {
-    display: none;
+  display: none;
 }
 .haupia-breadcrumbs a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .haupia-breadcrumbs a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .haupia-tabs {
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .haupia-tabs > input[type="radio"] {
-    position: absolute;
-    z-index: -1;
-    left: -1000vw;
-    opacity: 0;
-    width: 0;
-    overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  left: -1000vw;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
 }
 
 .haupia-tabs > label {
-    padding: var(--haupia-button-vertical-padding) var(--haupia-button-horizontal-padding);
-    margin-right: .25em;
-    line-height: var(--haupia-button-line-height);
-    font-family: var(--haupia-font-family);
-    color: var(--haupia-tabs-font-color);
-    background: var(--haupia-tabs-background-color-unselected);
-    border: var(--haupia-tabs-border-width) solid var(--haupia-tabs-border-color); 
-    border-bottom-color: var(--haupia-tabs-background-color-unselected);
-    border-radius: var(--haupia-border-radius) var(--haupia-border-radius) 0 0;
-    cursor: pointer;
-    user-select: none;
+  padding: var(--haupia-button-vertical-padding)
+    var(--haupia-button-horizontal-padding);
+  margin-right: 0.25em;
+  line-height: var(--haupia-button-line-height);
+  font-family: var(--haupia-font-family);
+  color: var(--haupia-tabs-font-color);
+  background: var(--haupia-tabs-background-color-unselected);
+  border: var(--haupia-tabs-border-width) solid var(--haupia-tabs-border-color);
+  border-bottom-color: var(--haupia-tabs-background-color-unselected);
+  border-radius: var(--haupia-border-radius) var(--haupia-border-radius) 0 0;
+  cursor: pointer;
+  user-select: none;
 }
 .haupia-tabs > label:last-of-type {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .haupia-tabs-content {
-    box-sizing: border-box;
-    display: none;
-    order: 10000;
-    flex-basis: 100%;
-    width: 100%;
-    position: relative;
-    top: calc(var(--haupia-tabs-border-width) * -1);
-    float: left;
-    padding: var(--haupia-tabs-content-padding);
-    background: var(--haupia-tabs-background-color);
-    border: var(--haupia-tabs-border-width) solid var(--haupia-tabs-border-color); 
-    border-radius: 0 var(--haupia-border-radius) var(--haupia-border-radius) var(--haupia-border-radius);    
+  box-sizing: border-box;
+  display: none;
+  order: 10000;
+  flex-basis: 100%;
+  width: 100%;
+  position: relative;
+  top: calc(var(--haupia-tabs-border-width) * -1);
+  float: left;
+  padding: var(--haupia-tabs-content-padding);
+  background: var(--haupia-tabs-background-color);
+  border: var(--haupia-tabs-border-width) solid var(--haupia-tabs-border-color);
+  border-radius: 0 var(--haupia-border-radius) var(--haupia-border-radius)
+    var(--haupia-border-radius);
 }
 
 .haupia-tabs > input:checked + label {
-    position: relative;
-    z-index: 2;
-    background: var(--haupia-tabs-background-color);
-    border-bottom-color: var(--haupia-tabs-background-color);
+  position: relative;
+  z-index: 2;
+  background: var(--haupia-tabs-background-color);
+  border-bottom-color: var(--haupia-tabs-background-color);
 }
 .haupia-tabs > input:checked:focus-visible + label {
-    outline: var(--haupia-focus-visible-outline);
+  outline: var(--haupia-focus-visible-outline);
 }
 .haupia-tabs > input:checked + label + .haupia-tabs-content {
-    display: block;
-    z-index: 1;
+  display: block;
+  z-index: 1;
 }
 
 .haupia-tabs > input:disabled + label {
-    background: var(--haupia-tabs-background-color-unselected);
-    cursor: default;
-    filter: var(--haupia-disabled-filter);
+  background: var(--haupia-tabs-background-color-unselected);
+  cursor: default;
+  filter: var(--haupia-disabled-filter);
 }
 
 .haupia-tabs-simple > label {
-    background: none;
-    margin-bottom: var(--haupia-tabs-content-padding);
-    border-width: 0 0 2px 0;
-    border-color: transparent;
-    border-bottom: 1px solid var(--haupia-tabs-border-color); 
-    transition: border-color var(--haupia-control-transition-time);
+  background: none;
+  margin-bottom: var(--haupia-tabs-content-padding);
+  border-width: 0 0 2px 0;
+  border-color: transparent;
+  border-bottom: 1px solid var(--haupia-tabs-border-color);
+  transition: border-color var(--haupia-control-transition-time);
 }
 .haupia-tabs-simple .haupia-tabs-content {
-    border: none;
-    background: none;
+  border: none;
+  background: none;
 }
-.haupia-tabs-simple > input:checked + label  {
-    background: none;
-    border-bottom: 2px solid var(--haupia-highlight-color);
+.haupia-tabs-simple > input:checked + label {
+  background: none;
+  border-bottom: 2px solid var(--haupia-highlight-color);
 }
 .haupia-tabs-simple > input:disabled + label {
-    background: none;
+  background: none;
 }
 
 .haupia-details {
-    border: var(--haupia-button-border-width) solid var(--haupia-container-border-color);
-    border-radius: var(--haupia-border-radius);
+  border: var(--haupia-button-border-width) solid
+    var(--haupia-container-border-color);
+  border-radius: var(--haupia-border-radius);
 }
 .haupia-summary {
-    display: block;
-    position: relative;
-    z-index: 2;
-    padding: var(--haupia-button-vertical-padding) var(--haupia-button-horizontal-padding) var(--haupia-button-vertical-padding) calc(var(--haupia-button-horizontal-padding) + 1.2em);
-    line-height: var(--haupia-button-line-height);
-    font-family: var(--haupia-font-family);
-    font-size: var(--haupia-font-size);
-    background: transparent;
-    cursor: pointer;
+  display: block;
+  position: relative;
+  z-index: 2;
+  padding: var(--haupia-button-vertical-padding)
+    var(--haupia-button-horizontal-padding)
+    var(--haupia-button-vertical-padding)
+    calc(var(--haupia-button-horizontal-padding) + 1.2em);
+  line-height: var(--haupia-button-line-height);
+  font-family: var(--haupia-font-family);
+  font-size: var(--haupia-font-size);
+  background: transparent;
+  border-radius: var(--haupia-border-radius);
+  cursor: pointer;
 }
-.haupia-summary {list-style: none}
-.haupia-summary::-webkit-details-marker {display: none; }
+.haupia-summary {
+  list-style: none;
+}
+/*.haupia-summary::-webkit-details-marker {
+  display: none;
+}
+.haupia-summary::marker {
+  display: none;
+}*/
 .haupia-summary:before {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    left: var(--haupia-button-horizontal-padding);
-    height: .6em;
-    width: .6em;
-    background-image: 
-        linear-gradient(0deg, transparent 40%, var(--haupia-font-color) 40%, var(--haupia-font-color) 60%, transparent 60%),
-        linear-gradient(90deg, transparent 40%, var(--haupia-font-color) 40%, var(--haupia-font-color) 60%, transparent 60%);
-    transform: translateY(-50%);
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: var(--haupia-button-horizontal-padding);
+  height: 0.6em;
+  width: 0.6em;
+  background-image: linear-gradient(
+      0deg,
+      transparent 38%,
+      var(--haupia-font-color) 40%,
+      var(--haupia-font-color) 60%,
+      transparent 62%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 38%,
+      var(--haupia-font-color) 40%,
+      var(--haupia-font-color) 60%,
+      transparent 62%
+    );
+  transform: translateY(-50%);
 }
+
 .haupia-details[open] .haupia-summary:before {
-    background-image: linear-gradient(0deg, transparent 40%, var(--haupia-font-color) 40%, var(--haupia-font-color) 60%, transparent 60%);
+  background-image: linear-gradient(
+    0deg,
+    transparent 38%,
+    var(--haupia-font-color) 40%,
+    var(--haupia-font-color) 60%,
+    transparent 62%
+  );
 }
+
 .haupia-details-content {
-    padding: var(--haupia-button-vertical-padding) var(--haupia-button-horizontal-padding)
+  height: 1px;
+  padding: var(--haupia-button-vertical-padding)
+    var(--haupia-button-horizontal-padding);
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: all var(--haupia-control-transition-time);
+  transition-behavior: allow-discrete;
+  overflow: hidden;
 }
+.haupia-details[open] .haupia-details-content {
+  height: auto;
+  transform: scaleY(1);
+  transform-origin: 0 0;
+  opacity: 1;
+  transition: all var(--haupia-control-transition-time);
+  transition-behavior: allow-discrete;
+  overflow: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  .haupia-details[open] .haupia-details-content {
+    transition: none;
+  }
+}
+
 .haupia-details .haupia-summary-content-open {
-    display: none;
+  display: none;
 }
 .haupia-details .haupia-summary-content-closed {
-    display: block;
+  display: block;
 }
 .haupia-details[open] .haupia-summary-content-open {
-    display: block;
+  display: block;
 }
 .haupia-details[open] .haupia-summary-content-closed {
-    display: none;
+  display: none;
 }
 
 .haupia-accordion .haupia-details {
-    border-radius: 0;
-    border-bottom-width: 0;
+  border-radius: 0;
+  border-bottom-width: 0;
 }
 .haupia-accordion .haupia-details:first-of-type {
-    border-top-left-radius: var(--haupia-border-radius);
-    border-top-right-radius: var(--haupia-border-radius);
+  border-top-left-radius: var(--haupia-border-radius);
+  border-top-right-radius: var(--haupia-border-radius);
 }
 .haupia-accordion .haupia-details:last-of-type {
-    border-bottom-left-radius: var(--haupia-border-radius);
-    border-bottom-right-radius: var(--haupia-border-radius);
-    border-bottom-width: var(--haupia-button-border-width);
+  border-bottom-left-radius: var(--haupia-border-radius);
+  border-bottom-right-radius: var(--haupia-border-radius);
+  border-bottom-width: var(--haupia-button-border-width);
 }
 
 .haupia-accordion.haupia-accordion-unstyled .haupia-details {
-    border-width: 0;
+  border-width: 0;
 }
 .haupia-accordion.haupia-accordion-unstyled .haupia-summary {
-    padding-left: 1em;
+  padding-left: 1em;
 }
 .haupia-accordion.haupia-accordion-unstyled .haupia-summary:before {
-    left: 0;
+  left: 0;
 }
 .haupia-accordion.haupia-accordion-unstyled .haupia-details-content {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .haupia-spinner {
-    box-sizing: border-box;
-    position: relative;
-    display: inline-block;
-    height: var(--haupia-spinner-size);
-    width: var(--haupia-spinner-size);
-    border: var(--haupia-spinner-border-width) solid transparent;
-    border-top-color: var(--haupia-spinner-border-color);
-    border-radius: 50%;
-    background: var(--haupia-spinner-background);
-    animation-name: hp-spinner;
-    animation-duration: .8s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
-    animation-timing-function: linear;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  height: var(--haupia-spinner-size);
+  width: var(--haupia-spinner-size);
+  border: var(--haupia-spinner-border-width) solid
+    var(--haupia-spinner-background-color);
+  border-top-color: var(--haupia-spinner-border-color);
+  border-radius: 50%;
+  background: var(--haupia-spinner-background);
+  animation-name: hp-spinner;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: linear;
 }
 @keyframes hp-spinner {
-    0% {
-        transform: rotate(0deg);
-    }
-    
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.haupia-progress /* the underlying, unfilled part */
-{
-    display: block;
-    width: 100%;
-    color: var(--haupia-progress-fill-color); /* the filled color in IE */
-    background: var(--haupia-input-background-color);
-    border: var(--haupia-progress-border-width) solid var(--haupia-border-color); 
-    border-radius: var(--haupia-border-radius);
+.haupia-progress /* the underlying, unfilled part */ {
+  display: block;
+  width: 100%;
+  color: var(--haupia-progress-fill-color); /* the filled color in IE */
+  background: var(--haupia-input-background-color);
+  border: var(--haupia-progress-border-width) solid var(--haupia-border-color);
+  border-radius: var(--haupia-border-radius);
 }
 
-.haupia-progress::-webkit-progress-bar  /* Webkit underlying bar */
-{
-    background: var(--haupia-input-background-color);    
-    border-radius: var(--haupia-border-radius);
+.haupia-progress::-webkit-progress-bar  /* Webkit underlying bar */ {
+  background: var(--haupia-input-background-color);
+  border-radius: var(--haupia-border-radius);
 }
 
-.haupia-progress::-webkit-progress-value /* Webkit filled part */
-{
-    background-color: var(--haupia-progress-fill-color); 
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .1) 100%);
-    transition: all var(--haupia-control-transition-time);
+.haupia-progress::-webkit-progress-value /* Webkit filled part */ {
+  background-color: var(--haupia-progress-fill-color);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  transition: all var(--haupia-control-transition-time);
 }
 
-.haupia-progress::-moz-progress-bar /* Firefox filled part */
-{
-    background-color: var(--haupia-progress-fill-color); 
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .1) 100%);
-    transition: all var(--haupia-control-transition-time);
+.haupia-progress::-moz-progress-bar /* Firefox filled part */ {
+  background-color: var(--haupia-progress-fill-color);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  transition: all var(--haupia-control-transition-time);
 }
 
 .haupia-progress-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 0 0 .3em;
-    margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 0 0.3em;
+  margin: 0;
 }
 .haupia-progress-list li {
-    flex: 1;
-    position: relative;
-    border-top: var(--haupia-progress-list-border-width) solid var(--haupia-border-color); 
-    padding: 1em 1.5em .5em .1em;
-    margin: 1em 0 0 -.3em;
-    list-style-type: none;
+  flex: 1;
+  position: relative;
+  border-top: var(--haupia-progress-list-border-width) solid
+    var(--haupia-border-color);
+  padding: 1em 1.5em 0.5em 0.1em;
+  margin: 1em 0 0 -0.3em;
+  list-style-type: none;
 }
 .haupia-progress-list li:last-of-type {
-    padding-right: 0;
-    border-top: none;
+  padding-right: 0;
+  border-top: none;
 }
 .haupia-progress-list li::before {
-    content: " ";
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2em;
-    height: 2em;
-    margin: 0;
-    padding: 0;
-    font-size: .8em;
-    font-weight: bold;
-    color: var(--haupia-progress-list-fill-color);
-    line-height: 1.5em;
-    text-align: center;
-    background-color: var(--haupia-progress-list-background-color);
-    border: var(--haupia-progress-list-border-width) solid gray;
-    border-radius: 50%;
-    transform: translateY(calc(-50% - (var(--haupia-progress-list-border-width) * .5))); 
+  content: " ";
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: round(2em, 1px);
+  height: round(2em, 1px);
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--haupia-progress-list-fill-color);
+  line-height: 1.5em;
+  text-align: center;
+  background-color: var(--haupia-progress-list-background-color);
+  border: var(--haupia-progress-list-border-width) solid gray;
+  border-radius: 50%;
+  transform: translateY(
+    calc(-50% - (var(--haupia-progress-list-border-width) * 0.5))
+  );
 }
 .haupia-progress-list .haupia-progress-list-complete {
-    border-color: var(--haupia-progress-list-fill-color);
+  border-color: var(--haupia-progress-list-fill-color);
 }
 .haupia-progress-list .haupia-progress-list-complete::before {
-    background-image:
-        linear-gradient(150deg, var(--haupia-progress-list-background-color), var(--haupia-progress-list-background-color) 35%, transparent 36%, transparent 59%, transparent 59%, var(--haupia-progress-list-background-color) 60%),        
-        linear-gradient(240deg, var(--haupia-progress-list-background-color), var(--haupia-progress-list-background-color) 17%, var(--haupia-progress-list-background-color) 18%, transparent 19%, transparent 67%, currentColor 68%, currentColor 75%, var(--haupia-progress-list-background-color) 76%),
-        linear-gradient(150deg, var(--haupia-progress-list-background-color), var(--haupia-progress-list-background-color) 50%, currentColor 51%, currentColor 55%, currentColor 59%, var(--haupia-progress-list-background-color) 60%);
-    border-color: var(--haupia-progress-list-fill-color);
+  background-image: linear-gradient(
+      150deg,
+      var(--haupia-progress-list-background-color),
+      var(--haupia-progress-list-background-color) 35%,
+      transparent 36%,
+      transparent 59%,
+      transparent 59%,
+      var(--haupia-progress-list-background-color) 60%
+    ),
+    linear-gradient(
+      240deg,
+      var(--haupia-progress-list-background-color),
+      var(--haupia-progress-list-background-color) 17%,
+      var(--haupia-progress-list-background-color) 18%,
+      transparent 19%,
+      transparent 67%,
+      currentColor 68%,
+      currentColor 75%,
+      var(--haupia-progress-list-background-color) 76%
+    ),
+    linear-gradient(
+      150deg,
+      var(--haupia-progress-list-background-color),
+      var(--haupia-progress-list-background-color) 50%,
+      currentColor 51%,
+      currentColor 55%,
+      currentColor 59%,
+      var(--haupia-progress-list-background-color) 60%
+    );
+  border-color: var(--haupia-progress-list-fill-color);
 }
 .haupia-progress-list .haupia-progress-list-current::before {
-    background-image: radial-gradient(var(--haupia-progress-list-fill-color) 50%, var(--haupia-progress-list-background-color) 51%, var(--haupia-progress-list-background-color) 100%);
-    border-color: var(--haupia-progress-list-fill-color);
+  background-image: radial-gradient(
+    var(--haupia-progress-list-fill-color) 49%,
+    var(--haupia-progress-list-background-color) 52%,
+    var(--haupia-progress-list-background-color) 100%
+  );
+  border-color: var(--haupia-progress-list-fill-color);
 }
-
 
 .haupia-h1,
 .haupia-h2,
@@ -931,102 +1156,101 @@ input:checked:disabled + .haupia-radio-buttonbar-button {
 .haupia-type h4,
 .haupia-type h5,
 .haupia-type h6 {
-    margin: var(--haupia-heading-margin);
-    line-height: var(--haupia-heading-line-height);
-    font-weight: var(--haupia-heading-font-weight);
+  margin: var(--haupia-heading-margin);
+  line-height: var(--haupia-heading-line-height);
+  font-weight: var(--haupia-heading-font-weight);
 }
 
 .haupia-h1.haupia-h1,
 .haupia-type h1 {
-    font-size: var(--haupia-font-size-h1);
+  font-size: var(--haupia-font-size-h1);
 }
-
 
 .haupia-h2.haupia-h2,
 .haupia-type h2 {
-    font-size: var(--haupia-font-size-h2);
+  font-size: var(--haupia-font-size-h2);
 }
 
 .haupia-h3.haupia-h3,
 .haupia-type h3 {
-    font-size: var(--haupia-font-size-h3);
+  font-size: var(--haupia-font-size-h3);
 }
 
 .haupia-h4.haupia-h4,
 .haupia-type h4 {
-    font-size: var(--haupia-font-size-h4);
+  font-size: var(--haupia-font-size-h4);
 }
 
 .haupia-h5.haupia-h5,
 .haupia-type h5 {
-    font-size: var(--haupia-font-size-h5);
+  font-size: var(--haupia-font-size-h5);
 }
 
 .haupia-h6.haupia-h6,
 .haupia-type h6 {
-    font-size: var(--haupia-font-size-h6);
+  font-size: var(--haupia-font-size-h6);
 }
 
 .haupia-blockquote {
-    border-left: var(--haupia-blockquote-border-left); 
-    margin-left: 0;
-    padding: .5em .5em .5em 1em;
-    font-size: var(--haupia-blockquote-font-size);
+  border-left: var(--haupia-blockquote-border-left);
+  margin-left: 0;
+  padding: 0.5em 0.5em 0.5em 1em;
+  font-size: var(--haupia-blockquote-font-size);
 }
 
 .haupia-text-left {
-    text-align: left;
+  text-align: left;
 }
 .haupia-text-center {
-    text-align: center;
+  text-align: center;
 }
 .haupia-text-right {
-    text-align: right;
+  text-align: right;
 }
 
 .haupia-code-block {
-    display: block;
-    width: 100%;
-    padding: .25em .5em;
-    color: white;
-    line-height: 1.3em;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: normal;
-    color: var(--haupia-code-block-font-color);
-    background: var(--haupia-code-block-background-color);
-    border-left: 5px solid var(--haupia-border-color);
+  display: block;
+  width: 100%;
+  padding: 0.25em 0.5em;
+  color: white;
+  line-height: 1.3em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: normal;
+  color: var(--haupia-code-block-font-color);
+  background: var(--haupia-code-block-background-color);
+  border-left: 5px solid var(--haupia-border-color);
 }
 
 .haupia-ol,
 .haupia-ul {
-    padding-left: 0;
-    list-style-type: none;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 .haupia-ol li,
 .haupia-ul li {
-    margin-bottom: var(--haupia-list-vertical-gutter);
+  margin-bottom: var(--haupia-list-vertical-gutter);
 }
 
 .haupia-ul li::before {
-    content: var(--haupia-ul-bullet);
-    padding-right: .5ch;
-    display: inline-block;
+  content: var(--haupia-ul-bullet);
+  padding-right: 0.5ch;
+  display: inline-block;
 }
 
 .haupia-ol {
-    counter-reset: haupia-ol;
+  counter-reset: haupia-ol;
 }
 
 .haupia-ol li::before {
-    counter-increment: haupia-ol;    
-    content: counter(haupia-ol) ".";
-    padding-right: .5ch;
-    display: inline-block;
+  counter-increment: haupia-ol;
+  content: counter(haupia-ol) ".";
+  padding-right: 0.5ch;
+  display: inline-block;
 }
 
 .haupia-ol-unstyled li::before,
 .haupia-ul-unstyled li::before {
-    content: none;
+  content: none;
 }
