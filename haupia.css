@@ -102,8 +102,13 @@
 
   --haupia-container-border-color: #ccc;
 
+  --haupia-progress-height: 0.5em;
   --haupia-progress-border-width: 1px;
   --haupia-progress-fill-color: var(--haupia-highlight-color);
+
+  --haupia-meter-color-optimum: #393;
+  --haupia-meter-color-sub-optimum: #993;
+  --haupia-meter-color-sub-sub-optimum: #933;
 
   --haupia-progress-list-border-width: 2px;
   --haupia-progress-list-fill-color: var(--haupia-highlight-color);
@@ -128,6 +133,8 @@
 
   --haupia-list-vertical-gutter: 0.2em;
   --haupia-ul-bullet: "\2022";
+  --haupia-dt_width: auto;
+  --haupia-dl-gap: .25em 0;
 
   --haupia-blockquote-font-size: calc(var(--haupia-font-size) * 1.25);
   --haupia-blockquote-border-left: 5px solid #c9c9c9;
@@ -482,6 +489,11 @@
 .haupia-input-text:disabled,
 .haupia-textarea:disabled {
   background: var(--haupia-input-background-color-disabled);
+}
+
+.haupia-datalist option {
+  font-family: var(--haupia-font-family);
+  font-size: var(--haupia-font-size);
 }
 
 .haupia-button:disabled,
@@ -1027,6 +1039,7 @@ input:checked:disabled + .haupia-radio-buttonbar-button {
 .haupia-progress /* the underlying, unfilled part */ {
   display: block;
   width: 100%;
+  height: var(--haupia-progress-height);
   color: var(--haupia-progress-fill-color); /* the filled color in IE */
   background: var(--haupia-input-background-color);
   border: var(--haupia-progress-border-width) solid var(--haupia-border-color);
@@ -1056,6 +1069,75 @@ input:checked:disabled + .haupia-radio-buttonbar-button {
     rgba(255, 255, 255, 0.1) 100%
   );
   transition: all var(--haupia-control-transition-time);
+}
+
+/* meter and progress share a visual look */
+.haupia-meter {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: var(--haupia-progress-height);
+  /* Firefox gets its border via background */
+  background: linear-gradient(
+      to right,
+      var(--haupia-border-color),
+      transparent var(--haupia-progress-border-width),
+      transparent calc(100% - var(--haupia-progress-border-width)),
+      var(--haupia-border-color)
+    ),
+    linear-gradient(
+      to bottom,
+      var(--haupia-border-color),
+      transparent var(--haupia-progress-border-width),
+      transparent calc(100% - var(--haupia-progress-border-width)),
+      var(--haupia-border-color)
+    );
+  border-radius: var(--haupia-border-radius);
+}
+
+.haupia-meter::-webkit-meter-bar {
+  background: var(--haupia-input-background-color);
+}
+
+.haupia-meter::-webkit-meter-bar,
+.haupia-meter::-webkit-meter-optimum-value,
+.haupia-meter::-webkit-meter-suboptimum-value,
+.haupia-meter::-webkit-meter-even-less-good-value {
+  height: var(--haupia-progress-height);
+  border-radius: var(--haupia-border-radius);
+}
+
+.haupia-meter::-webkit-meter-bar {
+  height: var(--haupia-progress-height);
+  border: var(--haupia-progress-border-width) solid var(--haupia-border-color);
+  border-radius: var(--haupia-border-radius);
+  background: var(--haupia-input-background-color);
+}
+
+.haupia-meter::-webkit-meter-optimum-value {
+  background: var(--haupia-meter-color-optimum);
+}
+.haupia-meter::-webkit-meter-suboptimum-value {
+  background: var(--haupia-meter-color-sub-optimum);
+}
+.haupia-meter::-webkit-meter-even-less-good-value {
+  background: var(--haupia-meter-color-sub-sub-optimum);
+}
+
+.haupia-meter:-moz-meter-optimum::-moz-meter-bar,
+.haupia-meter:-moz-meter-sub-optimum::-moz-meter-bar,
+.haupia-meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+  border-radius: var(--haupia-border-radius);
+}
+
+.haupia-meter:-moz-meter-optimum::-moz-meter-bar {
+  background: var(--haupia-meter-color-optimum);
+}
+.haupia-meter:-moz-meter-sub-optimum::-moz-meter-bar {
+  background: var(--haupia-meter-color-sub-optimum);
+}
+.haupia-meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+  background: var(--haupia-meter-color-sub-sub-optimum);
 }
 
 .haupia-progress-list {
@@ -1253,4 +1335,20 @@ input:checked:disabled + .haupia-radio-buttonbar-button {
 .haupia-ol-unstyled li::before,
 .haupia-ul-unstyled li::before {
   content: none;
+}
+
+.haupia-dl {
+    display: grid;
+    grid-template-columns: var(--haupia-dt-width) 1fr;
+    gap: var(--haupia-dl-gap);
+    margin: 0;
+}
+
+.haupia-dl > dt {
+  grid-column: 1;
+  font-weight: bold;
+}
+
+.haupia-dl > dd {
+  grid-column: 2;
 }

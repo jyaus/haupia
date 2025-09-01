@@ -246,7 +246,8 @@
             </div>
 
             <code class="component-code">
-            &lt;input type="radio" class="haupia-radio" name="exampleRadio" value="exampleValue" /&gt;
+&lt;input type="radio" class="haupia-radio" 
+    name="exampleRadio" value="exampleValue" /&gt;
             </code>
 
             <h4 class="component-variant">Radio buttonbar</h4>
@@ -302,26 +303,50 @@
         <a name="input"></a>
         <a name="text-input"></a>
         <a name="textinput"></a>
-        <a name="textarea"></a>
+        <a name="autocomplete"></a>
         <section class="item">
 
             <h3 class="component-name">Text input</h3>
             <div class="examples">
                 <input type="text" class="haupia-input-text" />
             </div>
+            <code class="component-code">
+            &lt;input type="text" class="haupia-input-text" /&gt;
+            </code>
 
+            <h3 class="component-name">Text input with autocomplete</h3>
+            <div class="examples">
+                <input type="text" class="haupia-input-text" list="myautocomplete" />
+                <datalist class="haupia-datalist" id="myautocomplete">
+                    <option value="Hawaii"></option>
+                    <option value="Kahoolawe"></option>
+                    <option value="Kauai"></option>
+                    <option value="Lānai"></option>
+                    <option value="Maui"></option>
+                    <option value="Molokai"></option>
+                    <option value="Niihau"></option>
+                    <option value="Oahu"></option>
+                </datalist>
+            </div>
+
+            <code class="component-code">
+            &lt;input type="text" class="haupia-input-text" 
+                list="exampleList"&gt;
+            &lt;datalist class="haupia-datalist" id="exampleList" /&gt;
+                &lt;option value="Choice 1" /&gt;&lt;option&gt;
+                &lt;option value="Choice 2" /&gt;&lt;option&gt;
+            &lt;/datalist&gt;
+            </code>
+
+            <a name="textarea"></a>
             <h3 class="component-name">Textarea</h3>
             <div class="examples">
                 <textarea class="haupia-textarea"></textarea>
             </div>
 
-
             <code class="component-code">
-            &lt;input type="text" class="haupia-input-text" /&gt;
-
             &lt;textarea class="haupia-textarea"&gt;&lt;/textarea&gt;
             </code>
-
 
         </section>
 
@@ -572,8 +597,9 @@
         &lt;span class="haupia-badge haupia-badge-secondary"&gt;secondary badge&lt;/span&gt;
         </code>
 
-
     </section>
+
+    
 
     <a name="progress"></a>
     <a name="progress-bar"></a>
@@ -582,9 +608,10 @@
 
         <h3 class="component-name">Progress</h3>
         <p class="description">
-            This is a styled version of the <code>progress</code> tag,
-            a visual meter.
-            (To show progress along a series of steps, see Progress List below.)
+            This is a styled version of the <code>&lt;progress&gt;</code> tag,
+            which shows the completion of a task.
+            (To show progress along a series of steps, see Progress List below.
+            To show a fractional value, see Meter below.)
         </p>
         <div class="examples">
             <progress class="haupia-progress" value="70" max="100"></progress>
@@ -605,7 +632,7 @@
 
         <h3 class="component-name">Progress List</h3>
         <p class="description">
-            The progress list shows the current progress along a series of steps.
+            The progress list shows the current progress along a series of labeled steps.
         </p>
         <div class="examples">
             <ul class="haupia-progress-list">
@@ -624,6 +651,54 @@
         </code>
 
     </section>
+
+    <a name="meter"></a>
+    <section class="item">
+
+        <h3 class="component-name">Meter</h3>
+        <p class="description">
+            This is a styled version of the <code>&lt;meter&gt;</code> tag,
+            which shows a fractional value.
+            (To show the amount of progress along a task, see Progress above.)
+        </p>
+        <div class="examples">
+            <p>
+                If we establish thresholds for a "low" value at 33%, "high" at 66%, 
+                and "optimum" at 90%:
+            </p>
+
+            <meter class="haupia-meter" min="0" max="100" low="33" high="66" optimum="90"
+            value="0" ></meter>
+
+            <br />
+
+            <meter class="haupia-meter" min="0" max="100" low="33" high="66" optimum="90"
+            value="5" ></meter>
+    
+            <br />
+
+            <meter class="haupia-meter" min="0" max="100" low="33" high="66" optimum="90"
+            value="50" ></meter>
+     
+            <br />
+
+            <meter class="haupia-meter" min="0" max="100" low="33" high="66" optimum="90"
+            value="75" ></meter>
+      
+            <br />
+
+            <meter class="haupia-meter" min="0" max="100" low="33" high="66" optimum="90"
+            value="100" ></meter>
+        </div>
+
+        <code class="component-code">
+        &lt;meter class="haupia-meter" min="0" max="100" 
+            low="33" high="66" optimum="90"
+            value="75"&gt;&lt;/meter&gt;
+        </code>
+
+    </section>
+
 
     </div>
 
@@ -1009,6 +1084,28 @@
             &lt;/div&gt;
             </code>
 
+        </section>
+
+        <a name="text"></a>
+        <a name="text-alignment"></a>
+        <a name="alignment"></a>
+        <section class="item">
+
+            <h3 class="component-name">Text alignment</h3>
+
+            <div class="examples">
+                <p class="haupia-text-left">Text aligned left.</p>
+                <p class="haupia-text-center">Text aligned center.</p>
+                <p class="haupia-text-right">Text aligned right.</p>
+                <h5 class="haupia-h5 haupia-text-right">H5 with "haupia-h5" and aligned right.</h5>
+            </div>
+
+
+            <code class="component-code">
+            &lt;p class="haupia-text-left"&gt;Text aligned left.&lt;/p&gt;
+            &lt;p class="haupia-text-center"&gt;Text aligned center.&lt;/p&gt;
+            &lt;p class="haupia-text-right"&gt;Text aligned right.&lt;/p&gt;
+            </code>
 
         </section>
 
@@ -1086,32 +1183,39 @@
             &lt;/ul&gt;
             </code>
 
-
         </section>
 
-        <a name="text"></a>
-        <a name="text-alignment"></a>
-        <a name="alignment"></a>
+
+        <a name="descriptionlist"></a>
+        <a name="dl"></a>
         <section class="item">
-
-            <h3 class="component-name">Text alignment</h3>
-
+            <h3 class="component-name">Description Lists</h3>
+            <p class="description">
+                A stylized <code>&lt;dl&gt;</code> tag, used
+                for terms and their descriptions, or for other kinds of name-value pairs.
+            </p>
             <div class="examples">
-                <p class="haupia-text-left">Text aligned left.</p>
-                <p class="haupia-text-center">Text aligned center.</p>
-                <p class="haupia-text-right">Text aligned right.</p>
-                <h5 class="haupia-h5 haupia-text-right">H5 with "haupia-h5" and aligned right.</h5>
+                <div class="example">
+                    <dl class="haupia-dl">
+                        <dt>Haupia</dt>
+                        <dd>A Hawaiian jellied dessert made from coconut milk.</dd>
+                        <dt>Coconut</dt>
+                        <dd>A tropical fruit whose nut has a hard, hairy shell.</dd>
+                        <dt>Hawaii</dt>
+                        <dd>A Polynesian archipelago; the 50th state in the United States of America.</dd>
+                    </ul>
+                </div>
             </div>
 
-
             <code class="component-code">
-            &lt;p class="haupia-text-left"&gt;Text aligned left.&lt;/p&gt;
-            &lt;p class="haupia-text-center"&gt;Text aligned center.&lt;/p&gt;
-            &lt;p class="haupia-text-right"&gt;Text aligned right.&lt;/p&gt;
+            &lt;dl class="haupia-dl"&gt;
+                &lt;dt&gt;Term&lt;/dt&gt;
+                &lt;dd&gt;Description&lt;/dd&gt;
+            &lt;/dl&gt;
             </code>
 
-
         </section>
+
 
         <a name="code"></a>
         <a name="code-block"></a>
@@ -1183,7 +1287,7 @@
         <p>
             Haupia provides a visible <code>focus-visible</code> indicator for its components.
             If you want this style to apply to <em>all</em> focusable elements on your page, 
-            so that your page is visually consistent, add this CSS:
+            so that your page is visually consistent, add this CSS to your page:
         </p>
 
         <pre class="haupia-code-block">
@@ -1202,7 +1306,7 @@
 
 <footer>
     <p class="footer-block">
-        Haupia was written by <a href="http://www.yaus.com/jeff">Jeff Yaus</a>, 
+        Haupia was written by <a href="http://www.yaus.com/">Jeff Yaus</a>, 
         who enjoys anything coconut-flavored.
     </p>
 </footer>

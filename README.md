@@ -25,6 +25,12 @@ Dismissible Alerts require the `:has` feature, which [some browsers](https://can
 
 Version History
 -----
+* Version 4.0.0 (2025 Sep 01):
+  - new components: Meter, Description List
+  - visual improvements to Alert icon, Badge, Input Group, Radio Button icon, and Spinner
+  - focus indicator now has a 2px offset
+  - Accordions: animate when opening, documented how to make an exclusive Accordion 
+  - breaking API change: Breadcrumbs divider is now done via border rather than background
 * Version 3.0.2 (2023 May 20): 
   - fixed Breadcrumb icons
 * Version 3.0.1 (2023 May 14): 
