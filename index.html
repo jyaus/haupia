@@ -719,20 +719,55 @@
     <section class="item">
 
         <h3 class="component-name">Tooltip</h3>
-        <div class="examples">
-            <div class="haupia-tooltip">
-                <p>Hover over me to see a tooltip.</p>
-                <aside class="haupia-tooltip-content" role="tooltip">I am the tooltip content!</aside>
-            </div>
+        <p class="description">For accessibility, tooltips will show when you either hover over the "trigger"
+            or when you bring it into focus.
+        </p>
+        <div class="examples">          
+            <p>
+                This paragraph starts with some regular content that won't show a tooltip.
+                <span class="haupia-tooltip">
+                    <span class="haupia-tooltip-trigger" aria-describedby="exampleTooltipContent" tabindex="0">
+                        Hover over me!
+                    </span>
+                    <span class="haupia-tooltip-content" role="tooltip" id="exampleTooltipContent">
+                        I am the tooltip content!
+                    </span>
+                </span>
+                Here's some more regular content.
+            </p>    
+
+            <div>
+                
+                <span class="haupia-tooltip">
+                    <button class="haupia-button haupia-tooltip-trigger" aria-describedby="exampleTooltipContent2">
+                        Hover over me!
+                    </button>
+                    <span class="haupia-tooltip-content" role="tooltip" id="exampleTooltipContent2">
+                        Clicking this button will surely do something awesome.
+                    </span>
+                </span>
+                
+            </div> 
         </div>
 
         <code class="component-code">
-        &lt;div class="haupia-tooltip"&gt;
-            &lt;p&gt;I am the regular content.&lt;/p&gt;
-            &lt;aside class="haupia-tooltip-content" role="tooltip"&gt;
+        &lt;span class="haupia-tooltip"&gt;
+            &lt;span class="haupia-tooltip-trigger aria-describedby="exampleTooltipContent" tabindex="0"&gt;
+                I am the regular content you can mouse over.
+            &lt;/span&gt;
+            &lt;span class="haupia-tooltip-content" role="tooltip" id="exampleTooltipContent"&gt;
                 I am the tooltip content.
-            &lt;/aside&gt;
-        &lt;/div&gt;
+            &lt;/span&gt;
+        &lt;/span&gt;
+
+        &lt;span class="haupia-tooltip"&gt;
+            &lt;button class="haupia-button haupia-tooltip-trigger aria-describedby="exampleTooltipContent2"&gt;
+                I am a button you can mouse over.
+            &lt;/span&gt;
+            &lt;span class="haupia-tooltip-content" role="tooltip" id="exampleTooltipContent2"&gt;
+                I am the tooltip content.
+            &lt;/span&gt;
+        &lt;/span&gt;
         </code>
 
     </section>

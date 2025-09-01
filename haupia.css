@@ -127,7 +127,7 @@
   --haupia-spinner-border-color: #909090;
   --haupia-spinner-background-color: #eeeeee;
 
-  --haupia-tooltip-background-color: #f3f3f3;
+  --haupia-tooltip-background-color: #eeeeee;
   --haupia-tooltip-z-index: 9999;
   --haupia-tooltip-shadow: 2px 2px 2px rgba(100, 100, 100, 0.2);
 
@@ -550,9 +550,14 @@ input:checked:disabled + .haupia-radio-buttonbar-button {
   cursor: help;
 }
 .haupia-tooltip-content {
+  box-sizing: border-box;
   position: absolute;
-  top: calc(100% + 0.5em);
+  bottom: calc(100% + 0.5em);
   left: 0.5em;
+  display: block;
+  min-width: 100px;
+  font-size: .9em;
+  width: fit-content;
   opacity: 0;
   z-index: -1;
   padding: 0.5em;
@@ -561,22 +566,25 @@ input:checked:disabled + .haupia-radio-buttonbar-button {
   border-radius: var(--haupia-border-radius);
 }
 .haupia-tooltip-content::before {
+  box-sizing: border-box;
   content: " ";
   position: absolute;
-  top: -0.4em;
+  bottom: -0.3em;
   left: 1em;
   z-index: -1;
   display: block;
   width: 0.9em;
   height: 0.9em;
   background-image: linear-gradient(
-    135deg,
+    45deg,
     var(--haupia-tooltip-background-color) 50%,
     transparent 50%
   );
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
 }
-.haupia-tooltip:hover .haupia-tooltip-content {
+.haupia-tooltip:hover .haupia-tooltip-content,
+.haupia-tooltip:focus .haupia-tooltip-content,
+.haupia-tooltip:focus-within .haupia-tooltip-content {
   opacity: 1;
   z-index: 3;
 }
