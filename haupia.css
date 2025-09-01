@@ -102,7 +102,7 @@
 
   --haupia-container-border-color: #ccc;
 
-  --haupia-progress-height: 0.5em;
+  --haupia-progress-height: max(0.5em, 8px);
   --haupia-progress-border-width: 1px;
   --haupia-progress-fill-color: var(--haupia-highlight-color);
 

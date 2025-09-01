@@ -25,6 +25,8 @@ Dismissible Alerts require the `:has` feature, which [some browsers](https://can
 
 Version History
 -----
+* Version 4.0.1 (2025 Sep 01):
+  - Progress and Meter: set minimum height
 * Version 4.0.0 (2025 Sep 01):
   - new components: Meter, Description List
   - visual improvements to Alert icon, Badge, Input Group, Radio Button icon, and Spinner
