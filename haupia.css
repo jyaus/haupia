@@ -143,6 +143,118 @@
   --haupia-code-block-font-color: #efe;
 }
 
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+
+  /* Apply dark mode to document body */
+  .haupia-body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    /* Core colors */
+    --haupia-font-color: #e0e0e0;
+    --haupia-border-color: #555;
+    --haupia-highlight-color: #4a9eff; /* Brighter blue for better contrast */
+
+    /* Adjusted filters for dark mode */
+    --haupia-hover-filter: saturate(120%) brightness(115%);
+    --haupia-active-filter: saturate(130%) brightness(110%);
+    --haupia-selected-filter: saturate(90%) brightness(120%);
+    --haupia-disabled-filter: saturate(50%) contrast(50%) brightness(70%);
+
+    /* Focus indicators */
+    --haupia-focus-visible-outline: 2px solid rgb(74 158 255 / 0.8);
+
+    /* Button variants */
+    --haupia-button-background-color: #4a9eff;
+    --haupia-button-font-color: #000;
+
+    --haupia-button-background-color-secondary: #404040;
+    --haupia-button-font-color-secondary: #e0e0e0;
+
+    --haupia-button-background-color-clear: transparent;
+    --haupia-button-font-color-clear: #e0e0e0;
+
+    --haupia-button-background-color-danger: #ff4757;
+    --haupia-button-font-color-danger: #fff;
+
+    --haupia-button-background-color-light: #404040;
+    --haupia-button-font-color-light: #e0e0e0;
+
+    /* Form inputs */
+    --haupia-input-background-color: #333333;
+    --haupia-input-background-color-disabled: #2a2a2a;
+    --haupia-checkbox-highlight-color: #4a9eff;
+    --haupia-text-input-focus-color: #4a9eff;
+    --haupia-input-group-text-background-color: #404040;
+
+    /* Alert variants - darker backgrounds with better contrast */
+    --haupia-alert-background-color: #404040;
+    --haupia-alert-font-color: #e0e0e0;
+    --haupia-alert-icon-color: #fff;
+
+    --haupia-alert-background-color-error: #4a1e1e;
+    --haupia-alert-font-color-error: #ffb3b3;
+    --haupia-alert-icon-background-color-error: #ff4757;
+
+    --haupia-alert-background-color-warning: #4a3a1e;
+    --haupia-alert-font-color-warning: #ffd93d;
+    --haupia-alert-icon-background-color-warning: #ffa502;
+
+    --haupia-alert-background-color-info: #1e2a4a;
+    --haupia-alert-font-color-info: #74b9ff;
+    --haupia-alert-icon-background-color-info: #0984e3;
+
+    --haupia-alert-background-color-success: #1e4a2a;
+    --haupia-alert-font-color-success: #55efc4;
+    --haupia-alert-icon-background-color-success: #00b894;
+
+    /* Container and layout */
+    --haupia-container-border-color: #555;
+    --haupia-progress-fill-color: #4a9eff;
+
+    /* Meter colors - adjusted for dark mode */
+    --haupia-meter-color-optimum: #00b894;
+    --haupia-meter-color-sub-optimum: #ffa502;
+    --haupia-meter-color-sub-sub-optimum: #ff4757;
+
+    --haupia-progress-list-fill-color: #4a9eff;
+    --haupia-progress-list-background-color: #2a2a2a;
+
+    /* Tabs */
+    --haupia-tabs-border-color: #555;
+    --haupia-tabs-background-color: #2a2a2a;
+    --haupia-tabs-background-color-unselected: #1a1a1a;
+    --haupia-tabs-font-color: #e0e0e0;
+
+    /* Spinner */
+    --haupia-spinner-border-color: #666;
+    --haupia-spinner-background-color: #404040;
+
+    /* Tooltip */
+    --haupia-tooltip-background-color: #333;
+    --haupia-tooltip-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+
+    /* Typography elements */
+    --haupia-blockquote-border-left: 5px solid #666;
+
+    /* Code blocks */
+    --haupia-code-block-background-color: #1a1a1a;
+    --haupia-code-block-font-color: #a8e6cf;
+
+    /* Surface colors */
+    --haupia-surface-background: #121212;
+    --haupia-surface-secondary: #1e1e1e;
+    --haupia-surface-tertiary: #2a2a2a;
+    --haupia-text-primary: #ffffff;
+    --haupia-text-secondary: #b0b0b0;
+    --haupia-text-muted: #808080;
+    --haupia-shadow-color: rgba(0, 0, 0, 0.3);
+    --haupia-overlay-background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+
 [class*="haupia-"] {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
