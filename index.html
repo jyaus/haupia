@@ -51,7 +51,8 @@
             It is made from <strong>just pure CSS</strong>, meaning <strong>no build steps</strong>, 
             no JavaScript dependencies, no CSS processing to configure, no image directory to set up.
             While maybe not as feature-rich as some component libraries, Haupia is ideal when you want
-            a minimum of fuss. Just drop the stylesheet onto your page, and you're off!
+            a minimum of fuss. Just drop the stylesheet onto your page, add the CSS classes to your 
+            elements, and you're off!
             
         </p>
                 
@@ -78,7 +79,8 @@
             <a href="https://github.com/jyaus/haupia" class="haupia-button haupia-button-small haupia-button-secondary">Fork it on GitHub</a>
         </div>
         <p>
-            To install Haupia, just copy the stylesheet into your site, and link to it from your page. That's it! Go (coco)nuts!
+            To install Haupia, just copy the stylesheet into your site, and link to it from your page. 
+            Then add the CSS classes to the elements you want to use Haupia. That's it! Go (coco)nuts!
         </p>
         <p>
             Haupia only styles the CSS classes that are part of its API; it won't affect anything else
@@ -101,6 +103,14 @@
             of <code>--haupia-button-background-color</code> to your preferred color.
         </p>
         
+        <h4 class="component-variant">Typography</h4>    
+        <p>
+            Haupia will always keep your site's font for body text and headings.
+            For the other components, it will default to using your site's font;
+            if you want the Haupia components to use a different font instead, 
+            change the value for <code>--haupia-font-family</code>.
+        </p>
+
         <h4 class="component-variant">License</h4>
         <p>
             Haupia is free to use, under the <a href="https://github.com/jyaus/haupia/blob/master/LICENSE">MIT license</a>.
